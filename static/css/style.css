@@ -8,5 +8,14 @@
 }
 
 
+.goals {
+    text-align: left;
+    margin-left: 20;
+}
 
 
+.card_size {
+    width: 25%;
+    float: left;
+    padding: 5px;
+}

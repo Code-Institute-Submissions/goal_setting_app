@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Add Goal</h3>
 <div class="row">
-    <form method="POST" class="col s12">
+    <form method="POST" class="col s12" enctype='multipart/form-data'>
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
@@ -32,15 +32,6 @@
         <i class="material-icons prefix">today</i>
         <input id="due_date" name="due_date" type="text" class="datepicker">
         <label for="icon_prefix">Due Date</label>
-    </div>
-</div>
-<div class="row">
-    <div class="switch">
-        <label>
-                  <input id="is_done" name="is_done" type="checkbox">
-                  <span class="lever"></span>
-                  Is Done
-                </label>
     </div>
 </div>
 <div class="row">

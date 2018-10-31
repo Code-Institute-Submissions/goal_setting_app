@@ -2,56 +2,22 @@
 
 <h2>{{ category }}</h2>
 
-
 {% for category in categories %}
-<a href="{{ url_for("get_goals_by_category", category=category) }}" class="waves-effect waves-teal btn-flat">{{ category }}</a> | {% endfor %}
+<a href="{{ url_for ('get_goals_by_category', category=category) }}" class="waves-effect waves-teal btn-flat">{{ category }}</a> | {% endfor %} {% for goal in goals %}
+
+<p>
+    <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}">{{goal.goal_name}}</a>
+</p>
+<p>
+    {{goal.due_date}}
+</p>
+<p>
+    {{goal.goal_reasons}}
+</p>
+<br>
+
+{% endfor %}
+
+<a href="{{url_for('add_goal')}}">Add Goal</a> {% endblock %}
 
 
-<ul class="collapsible" data-collapsible="accordion">
-    {% for goal in goals %}
-
-    <li>
-        <div class="collapsible-header">
-            <div class="col s3">
-                <i class="material-icons">expand_more</i>
-
-                <a href="#modal1" class="delete_goal_btn waves-effect waves-light btn btn_small modal-trigger" data-goalid={{goal._id}}>Done</a>
-            </div>
-            <div class="card-panel teal lighten-2">
-                <strong>{{goal.goal_name}}</strong> - {{goal.due_date}}
-            </div>
-            <div>
-                <span class="card-panel red lighten-5">
-                {{goal.goal_reasons}} 
-            </span>
-            </div>
-    </li>
-    {% endfor %}
-    <br>
-
-    <a href="{{url_for('add_goal')}}" class="card-panel purple lighten-2">Add Goal</a>
-
-</ul>
-
- Modal Structure 
-    <div id="modal1" class="modal center-align">
-        <div class="modal-content">
-            <h4>Are you sure?</h4>
-        </div>
-
-        <div class="row modal-footer">
-            <form action="#" method="POST" class="col s6 center-align">
-                <input id="hidden-goal-id" type="hidden" name="goal_id">
-                <button class="testing btn waves-effect waves-light margin-left" type="submit" name="action">Yes
-                    <i class="material-icons right">thumb_up</i>
-                </button>
-            </form>
-
-            <form action="{{ url_for('get_goals') }}" method="GET" class="col s6 center-align">
-                <button class="btn waves-effect waves-light margin-left" type="submit" name="action">No
-                    <i class="material-icons right">thumb_down</i>
-                </button>
-            </form>
-        </div>
-    </div>
-{% endblock %}

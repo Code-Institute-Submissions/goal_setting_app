@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+
+
+
+<p> Category: {{ goal.category_name }}</p>
+<p> Goal Name: {{ goal.goal_name }}</p>
+<p> Why do I want to achieve this goal? {{ goal.goal_reasons }}</p>
+<h3> Steps: </h3>
+
+{%for step in goal.steps%} 
+<p>{{step.name}} - {{step.is_done}}</p>
+{%endfor%}
+
+
+<p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}">Add a Step</a></p>
+
+{% endblock %}
