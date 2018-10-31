@@ -22,6 +22,10 @@ def get_category_names():
 def home_page():
     return render_template("home.html")
     
+@app.route("/overview")
+def overview_page():
+    return render_template("overview.html")
+    
 @app.route('/categories')
 def get_categories():
     categories = get_category_names()
@@ -32,8 +36,7 @@ def add_category():
     category_name = request.form["category_name"]
     mongo.db.create_collection(category_name)
     return redirect(url_for("get_categories"))
-    
- 
+   
  
 @app.route("/goals")
 def get_goals():

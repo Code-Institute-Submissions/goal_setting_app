@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %} {% for category in categories %}
-<p><a href="#">{{ category }}</a></p>
+<p class="card-panel hoverable">{{ category }}</p>
 {% endfor %}
 
 <form action="categories/add" method="POST" class="col s12">
