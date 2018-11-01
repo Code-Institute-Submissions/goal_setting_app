@@ -1,39 +1,41 @@
 {% extends 'base.html' %} {% block content %}
 
-{% for category in categories %}
+<h2>{{ category }}</h2>
+
+{% for category in all_categories %}
+<div>
+    <span>
+<p>{{ category.category_name }}</p> 
+<img src="{{category.image}}">
+</div>
+</span> {% endfor %}
 
 
-        <div class="card card_size">
-            <div class="card-image">
-                <img src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
-                <span class="card-title">{{ category }}</span>
+
+    <form action="categories/add" method="POST" class="col s12" enctype="multipart/form-data">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="category_name" name="category_name" type="text">
+                <label for="icon_prefix">Category Name</label>
             </div>
         </div>
-
-{% endfor %}
-
-        <div class="card card_size">
-            <div class="card-image">
-                <img src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
-                <span class="card-title">Add Category</span>
-            </div>
-        </div>
-
-
-
-<form action="categories/add" method="POST" class="col s12">
-    <div class="row">
-        <div class="input-field col s12">
-            <input id="category_name" name="category_name" type="text">
-            <label for="icon_prefix">Category Name</label>
-        </div>
-    </div>
-    <div class="row">
-        <button class="btn waves-effect waves-light" type="submit">Add Category
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit">Add Category
              </button>
-    </div>
-</form>
+        </div>
+        <div class="row">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Image</span>
+                    <input type="file" name="image">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+        </div>
+    </form>
 
 
 
-{% endblock content %}
+    {% endblock content %}

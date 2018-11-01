@@ -1,5 +1,29 @@
 {% extends 'base.html' %} {% block content %}
 
+<h2>{{ category }}</h2>
+
+{% for category in categories %}
+<a href="{{ url_for ('get_goals_by_category', category=category) }}" class="waves-effect waves-teal btn-flat">{{ category }}</a> | {% endfor %} {% for goal in goals %}
+
+<p>
+    <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}">{{goal.goal_name}}</a>
+</p>
+<p>
+    {{goal.due_date}}
+</p>
+<p>
+    {{goal.goal_reasons}}
+</p>
+<br>
+
+{% endfor %}
+
+<a href="{{url_for('add_goal')}}">Add Goal</a> {% endblock %}
+
+
+
+{% extends 'base.html' %} {% block content %}
+
 
 
 <h2>{{ category }}</h2>
@@ -63,5 +87,45 @@
 <!--</div>-->
 <!--    {% endfor %}-->
 
+
+
+old categories
+
+<div class="card card_size">
+    <div class="card-image">
+        <img src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
+        <span class="card-title">{{ category }}</span>
+    </div>
+</div>
+
+{% endfor %}
+
+
+<form action="categories/add" method="POST" class="col s12">
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="category_name" name="category_name" type="text">
+            <label for="icon_prefix">Category Name</label>
+        </div>
+    </div>
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit">Add Category
+             </button>
+    </div>
+
+    <div class="row">
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>Image</span>
+                <input type="file" name="image">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+    </div>
+
+
+</form>
 
 

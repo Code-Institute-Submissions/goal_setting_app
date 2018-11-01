@@ -31,24 +31,35 @@ def overview_page():
 @app.route('/categories')
 def get_categories():
     categories = get_category_names()
-    return render_template("categories.html", categories=categories)
+    all_categories = mongo.db["images"].find()
+    return render_template("categories.html", all_categories=all_categories)
 
 @app.route('/categories/add', methods=["POST"])
 def add_category():
+    image = request.files['image']  
+    image_string = base64.b64encode(image.read()).decode("utf-8")
+    form_values = request.form.to_dict()
+        
+    form_values["image"] = "data:image/png;base64," + image_string
+
     category_name = request.form["category_name"]
     mongo.db.create_collection(category_name)
+    mongo.db["images"].insert_one(form_values)
     return redirect(url_for("get_categories"))
    
  
 @app.route("/goals")
 def get_goals():
-    categories = get_category_names()
+    # categories = get_category_names()
+    categories = mongo.db["images"].find()
+    # print(all_categories)
     return render_template("goals.html", categories=categories, category='Goals List')
     
 @app.route("/goals/<category>")
 def get_goals_by_category(category):
     goals = mongo.db[category].find()
-    categories = get_category_names()
+    # categories = get_category_names()
+    categories = mongo.db["images"].find()
     return render_template("goals.html", goals=goals, categories=categories, category=category)
 
 
@@ -64,6 +75,7 @@ def add_step(category, goal_id):
         if request.method=="POST":
         
             step = {
+                "_id": ObjectId(),
                 "name": request.form["step"],
                 "is_done": False
             }
@@ -81,6 +93,35 @@ def add_step(category, goal_id):
 
 
 
+@app.route("/goals/<category>/<goal_id>/<step_id>/done", methods=["POST"])
+def mark_done(category, goal_id, step_id):
+    the_goal = mongo.db[category].find_one({"_id": ObjectId(goal_id)})
+    
+    for step in the_goal["steps"]:
+        if step["_id"]==ObjectId(step_id):
+            step["is_done"] = True
+        
+    
+    mongo.db[category].update({"_id":ObjectId(goal_id)},the_goal)
+    
+    return redirect(url_for("goal_details", category=category, goal_id=goal_id))
+    
+@app.route("/goals/<category>/<goal_id>/<step_id>/not_done", methods=["POST"])
+def mark_not_done(category, goal_id, step_id):
+    the_goal = mongo.db[category].find_one({"_id": ObjectId(goal_id)})
+    
+    for step in the_goal["steps"]:
+        if step["_id"]==ObjectId(step_id):
+            step["is_done"] = False
+        
+    
+    mongo.db[category].update({"_id":ObjectId(goal_id)},the_goal)
+    
+    return redirect(url_for("goal_details", category=category, goal_id=goal_id))
+    
+    
+    
+    
 
 
     

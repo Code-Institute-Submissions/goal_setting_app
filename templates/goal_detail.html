@@ -8,10 +8,28 @@
 <p> Why do I want to achieve this goal? {{ goal.goal_reasons }}</p>
 <h3> Steps: </h3>
 
-{%for step in goal.steps%} 
+{%for step in goal.steps%}
 <p>{{step.name}} - {{step.is_done}}</p>
-{%endfor%}
 
+{% if step.is_done %}
+
+<form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
+    <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Not Done">
+</form>
+
+{% else %} 
+
+<form method="POST" action="{{ url_for('mark_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
+    <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Done">
+</form>
+
+
+{% endif %}
+
+
+
+
+{%endfor%}
 
 <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}">Add a Step</a></p>
 

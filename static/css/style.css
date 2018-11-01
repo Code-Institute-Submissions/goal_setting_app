@@ -5,6 +5,8 @@
     top: 10%;
     left: 10%;
     right: 50%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
 }
 
 
@@ -14,8 +16,44 @@
 }
 
 
+.nav-wrapper {
+    background-color: #000000;
+}
+
+
 .card_size {
     width: 25%;
     float: left;
     padding: 5px;
+}
+
+.waves {
+    background-color: purple;
+}
+
+.waves-light {
+    background-color: purple;
+
+}
+
+.btn {
+    background-color: green;
+
+}
+.small-img {
+    width: 100px;
+    height: 100px;
+}
+
+.category-label{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+}
+
+.category-title{
+    position: absolute;
+    top:10px;
+    left:20px;
 }

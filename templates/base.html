@@ -17,19 +17,19 @@
         <header>
             <nav>
                 <div class="nav-wrapper">
-                    <a class="brand-logo">Goals</a>
+                    <a class="brand-logo"> Goals</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('overview_page') }}">Overview</a></li>
-                        <li><a href="{{ url_for('get_goals') }}">Goals</a></li>
-                        <li><a href="{{ url_for('add_goal') }}">New Goal</a></li>
-                        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                        <li><a class="btn" href="{{ url_for('overview_page') }}">Overview</a></li>
+                        <li><a class="waves-orange btn" href="{{ url_for('get_goals') }}">Goals</a></li>
+                        <li><a class="waves-effect btn" href="{{ url_for('add_goal') }}">New Goal</a></li>
+                        <li><a class="waves-light btn" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                        <li><a href="{{ url_for('overview_page') }}">Overview</a></li>
-                        <li><a href="{{ url_for('get_goals') }}">Goals</a></li>
-                        <li><a href="{{ url_for('add_goal') }}">New Goal</a></li>
-                        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                        <li><a class="waves-purple btn" href="{{ url_for('overview_page') }}">Overview</a></li>
+                        <li><a class="waves-orange btn" href="{{ url_for('get_goals') }}">Goals</a></li>
+                        <li><a class="waves-effect waves-light btn" href="{{ url_for('add_goal') }}">New Goal</a></li>
+                        <li><a class="waves-effect waves-light btn" href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                     </ul>
                 </div>
             </nav>
