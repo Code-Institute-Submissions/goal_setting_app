@@ -6,20 +6,26 @@
 </div>
 {% for goal in unfinished %}
 <div class="inprogress_goals">
-    <p><span><a class = "goal_button" href="#">{{ goal.goal_name }}:</a></span><span>{{ goal.status }}</span></p>
+    <p><span><a class = "goal_button" href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}">{{ goal.goal_name }}</a></span><br/><span>{{ goal.status }}</span></p>
 </div>
 {%endfor%}
 
 </div>
 
-<div class="completed">
+<div class="inprogress">
     <h3> Completed Goals </h3>
-
-    <p> Run a marathon: Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
-    <p> Run a marathon: Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
-    <p> Run a marathon: Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
-
-
 </div>
+
+<div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>
+    <p>Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
+</div>
+<div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>
+    <p>Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
+</div>
+<div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>
+    <p>Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
+</div>
+
+
 
 {% endblock %}

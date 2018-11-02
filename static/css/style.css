@@ -10,8 +10,20 @@
 
 .nav-font {
     font-family: 'Roboto Slab', serif;
-    font-size: 25px;
+    font-size: 30px;
+    margin: 5px;
+    color: #ff4000;
 
+}
+
+.nav-font:hover {
+    font-size: 35px;
+    font: bolder;
+    background-color: #ff4000;
+    color: white;
+    margin: 6px;
+    padding: 5px;
+    border: 1px
 }
 
 
@@ -21,34 +33,67 @@
 
 .goal_button {
 
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #262626;
+    color: #ff4000;
     border: 1px;
     border-radius: 4px;
     padding: 16px 32px;
     text-align: center;
+    font-size: 35px;
 
 }
 
 .goal_button:hover {
-    font-size: 30px;
+    font-size: 45px;
     font: bolder;
+
 }
 
+.done_button {
+    
+    background-color: #262626;
+    color: #009900;
+    border: 1px;
+    border-radius: 4px;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 35px;
+}
 
+.done_button:hover {
+    font-size: 45px;
+    font: bolder;
+
+}
 
 .inprogress {
     height: 100%;
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
     color: white;
-    margin-top: 100px;
-    background-color: #1a1a1a;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 80px;
+    background-color: black;
+    padding: 20px;
     position: relative;
+    box-shadow: 0px 5px 0px #262626;
+    margin-right: 100px;
+    margin-left: 100px;
+
+
+}
+
+.inprogress_goals {
+    text-align: center;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: white;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 2px;
+    background-color: #262626;
+    padding: 30px;
+    
+
 
 }
 
@@ -56,40 +101,10 @@
     height: 90px;
     width: 90px;
     position: absolute;
-    top: 18px;
+    top: 15px;
     left: 16px;
     font-size: 18px;
 
-}
-
-.inprogress_goals {
-    height: 100%;
-    font-family: 'Roboto Slab', serif;
-    font-size: 25px;
-    color: white;
-    margin-bottom: 100px;
-    margin-right: 200px;
-    margin-left: 200px;
-    background-color: #1a1a1a;
-    padding-top: 10px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 100px
-}
-
-.completed {
-    height: 100%;
-    font-family: 'Roboto Slab', serif;
-    font-size: 25px;
-    color: black;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    background-color: green;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px
 }
 
 
@@ -112,10 +127,12 @@ body {
 
 }
 
-.brand-logo {
+.logo {
     font-family: 'Fredoka One', cursive;
     margin-left: 10px;
     margin-top: 10px;
+    color: #ff4000;
+    font-size: 45px;
 }
 
 
@@ -161,7 +178,14 @@ body {
 
 
 .nav-wrapper {
-    background-color: #000000;
+    background-color: white;
+    color: #ff4000;
+
+}
+
+nav {
+    height: 80px;
+
 }
 
 
