@@ -21,18 +21,17 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="btn" href="{{ url_for('overview_page') }}">Overview</a></li>
                     <li><a class="btn" href="{{ url_for('get_goals') }}">Goals</a></li>
-                    <li><a class="btn" href="{{ url_for('get_categories') }}">Add a new Category</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a class="btn" href="{{ url_for('overview_page') }}">Overview</a></li>
                     <li><a class="btn" href="{{ url_for('get_goals') }}">Goals</a></li>
-                    <li><a class="btn" href="{{ url_for('get_categories') }}">Add a new Category</a></li>
+
                 </ul>
             </div>
         </nav>
     </header>
 
-  
+
     <div>
         {% block content %} {% endblock %}
     </div>

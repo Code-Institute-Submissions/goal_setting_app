@@ -1,13 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1> Categories </h1>
-
-{% for category in all_categories %}
-
-<div class="category-label"><img class="small-img" src="{{category.image}}">
-    <p class="category-title">{{ category.category_name }}</p>
-</div>
-{% endfor %}
 
 
 <form action="categories/add" method="POST" class="col s12" enctype="multipart/form-data">

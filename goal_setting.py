@@ -45,7 +45,7 @@ def add_category():
     category_name = request.form["category_name"]
     mongo.db.create_collection(category_name)
     mongo.db["images"].insert_one(form_values)
-    return redirect(url_for("get_categories"))
+    return redirect(url_for("get_goals"))
    
  
 @app.route("/goals")
