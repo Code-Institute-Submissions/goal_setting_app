@@ -14,16 +14,13 @@
 
 <body>
 
-    <container>
-        <img class="responsive-img mainimage" src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
 
-        <div class="intro">
-            <h1> Goal App </h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente non quis sint voluptates magnam aliquam nesciunt quisquam reprehenderit id provident animi, ipsa hic officia, quod magni! Ex voluptatibus, vel? Quo</p>
-            <a class="waves-effect btn" href="{{url_for('overview_page')}}"> Continue </a>
-        </div>
-    </container>
+    <img class="responsive-img" src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
 
-</body>
+    <div class="row intro">
+        <div class="col s8 m8 l8"><span>Goal set your way to your best year yet!</span> <br><a href="{{url_for('overview_page')}}"> Continue </div>
+    </div>
+
+ </body>
 
 </html>

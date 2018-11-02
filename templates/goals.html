@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+<container class="font">
+    
 <h2>{{ category }}</h2>
 
 {% for category in categories %}
@@ -20,4 +22,4 @@
 
 <a href="{{url_for('add_goal')}}">Add Goal</a> {% endblock %}
 
-
+</container>

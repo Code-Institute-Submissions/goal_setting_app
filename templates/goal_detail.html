@@ -2,35 +2,31 @@
 
 
 
+<container>
+    <p> Category: {{ goal.category_name }}</p>
+    <p> Goal Name: {{ goal.goal_name }}</p>
+    <p> Why do I want to achieve this goal? {{ goal.goal_reasons }}</p>
+    <p>{{ goal.status }}</p>
+    <h3> Steps: </h3>
 
-<p> Category: {{ goal.category_name }}</p>
-<p> Goal Name: {{ goal.goal_name }}</p>
-<p> Why do I want to achieve this goal? {{ goal.goal_reasons }}</p>
-<h3> Steps: </h3>
+    {%for step in goal.steps%}
+    <p>{{step.name}} - {{step.is_done}}</p>
 
-{%for step in goal.steps%}
-<p>{{step.name}} - {{step.is_done}}</p>
+    {% if step.is_done %}
 
-{% if step.is_done %}
+    <form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
+        <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Not Done">
+    </form>
 
-<form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
-    <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Not Done">
-</form>
+    {% else %}
 
-{% else %} 
-
-<form method="POST" action="{{ url_for('mark_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
-    <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Done">
-</form>
-
-
-{% endif %}
+    <form method="POST" action="{{ url_for('mark_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
+        <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Done">
+    </form>
 
 
+    {% endif %} {%endfor%}
 
-
-{%endfor%}
-
-<p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}">Add a Step</a></p>
-
+    <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}">Add a Step</a></p>
+</container>
 {% endblock %}

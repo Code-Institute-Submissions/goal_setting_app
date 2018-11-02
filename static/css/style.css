@@ -2,13 +2,54 @@
     text-align: left;
     color: black;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 10%;
-    right: 50%;
     font-family: 'Roboto Slab', serif;
-    font-size: 25px;
+
 }
 
+
+.btn {
+    border-radius: 40px;
+    
+}
+
+.brand-logo {
+    font-family: 'Roboto Slab', serif;
+}
+
+@media (max-width: 767px) {
+    .intro {
+        top: 15%;
+        left: 7%;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .intro {
+        top: 15%;
+        left: 2%;
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro {
+        top: 25%;
+        left: 7%;
+        font-size: 40px;
+    }
+}
+
+
+
+
+.font {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: black;
+}
 
 .goals {
     text-align: left;
@@ -37,23 +78,32 @@
 }
 
 .btn {
-    background-color: green;
+    background-color: blue;
 
 }
+
 .small-img {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+
+
 }
 
-.category-label{
-    width: 100px;
-    height: 100px;
+.category-label {
+    width: 240px;
+    height: 240px;
     position: relative;
     display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: black;
 }
 
-.category-title{
-    position: absolute;
-    top:10px;
-    left:20px;
+.category-title {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: black;
 }

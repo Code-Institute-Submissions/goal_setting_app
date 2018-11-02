@@ -1,41 +1,39 @@
 {% extends 'base.html' %} {% block content %}
 
-<h2>{{ category }}</h2>
+<h1> Categories </h1>
 
 {% for category in all_categories %}
-<div>
-    <span>
-<p>{{ category.category_name }}</p> 
-<img src="{{category.image}}">
+
+<div class="category-label"><img class="small-img" src="{{category.image}}">
+    <p class="category-title">{{ category.category_name }}</p>
 </div>
-</span> {% endfor %}
+{% endfor %}
 
 
-
-    <form action="categories/add" method="POST" class="col s12" enctype="multipart/form-data">
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="category_name" name="category_name" type="text">
-                <label for="icon_prefix">Category Name</label>
-            </div>
+<form action="categories/add" method="POST" class="col s12" enctype="multipart/form-data">
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="category_name" name="category_name" type="text">
+            <label for="icon_prefix">Category Name</label>
         </div>
-        <div class="row">
-            <button class="btn waves-effect waves-light" type="submit">Add Category
+    </div>
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit">Add Category
              </button>
-        </div>
-        <div class="row">
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>Image</span>
-                    <input type="file" name="image">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
+    </div>
+    <div class="row">
+        <div class="file-field input-field">
+            <div class="btn">
+                <span>Image</span>
+                <input type="file" name="image">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
             </div>
         </div>
-    </form>
+    </div>
+</form>
 
 
 
-    {% endblock content %}
+{% endblock content %}

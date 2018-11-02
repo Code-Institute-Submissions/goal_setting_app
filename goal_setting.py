@@ -97,10 +97,14 @@ def add_step(category, goal_id):
 def mark_done(category, goal_id, step_id):
     the_goal = mongo.db[category].find_one({"_id": ObjectId(goal_id)})
     
+    done=0
     for step in the_goal["steps"]:
         if step["_id"]==ObjectId(step_id):
             step["is_done"] = True
-        
+        if step["is_done"]:
+            done+=1
+            
+    the_goal["status"]="You have completed {0} out of {1} steps".format(done, len(the_goal["steps"]))
     
     mongo.db[category].update({"_id":ObjectId(goal_id)},the_goal)
     
