@@ -8,15 +8,118 @@
 
 }
 
+.nav-font {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+
+}
+
+
+.goaldetail {
+    color: white;
+}
+
+.goal_button {
+
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+    padding: 16px 32px;
+    text-align: center;
+
+}
+
+.goal_button:hover {
+    font-size: 30px;
+    font: bolder;
+}
+
+
+
+.inprogress {
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: white;
+    margin-top: 100px;
+    background-color: #1a1a1a;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    position: relative;
+
+}
+
+.climber_image {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    font-size: 18px;
+
+}
+
+.inprogress_goals {
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    background-color: #1a1a1a;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 100px
+}
+
+.completed {
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: green;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px
+}
+
+
+h3 {
+    text-align: center;
+    font: bolder;
+}
+
+body {
+    background-color: black;
+}
+
+
+.tick {
+    list-style-image: url('/static/images/donesymbol.png');
+}
 
 .btn {
     border-radius: 40px;
-    
+
 }
 
 .brand-logo {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Fredoka One', cursive;
+    margin-left: 10px;
+    margin-top: 10px;
 }
+
+
+
 
 @media (max-width: 767px) {
     .intro {
@@ -48,7 +151,7 @@
 .font {
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
-    color: black;
+    color: white;
 }
 
 .goals {
@@ -68,14 +171,6 @@
     padding: 5px;
 }
 
-.waves {
-    background-color: purple;
-}
-
-.waves-light {
-    background-color: purple;
-
-}
 
 .btn {
     background-color: blue;
@@ -97,7 +192,7 @@
     display: inline-block;
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
-    color: black;
+    color: white;
 }
 
 .category-title {
@@ -105,5 +200,5 @@
     text-align: center;
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
-    color: black;
+    color: white;
 }

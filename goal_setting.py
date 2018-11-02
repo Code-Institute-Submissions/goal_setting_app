@@ -13,26 +13,24 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
-def get_category_names():
-    categories = []
-    for category in mongo.db.collection_names():
-        if not category.startswith("system."):
-            categories.append(category)
-    return categories 
-
 @app.route("/")
 def home_page():
     return render_template("home.html")
     
 @app.route("/overview")
 def overview_page():
-    return render_template("overview.html")
+    categories = mongo.db["Categories"].find()
+    
+    goals = []
+    for category in categories:
+        category_name = category["category_name"]
+        goals += mongo.db[category_name].find()
+     
+    return render_template("overview.html", unfinished=goals)
     
 @app.route('/categories')
 def get_categories():
-    categories = get_category_names()
-    all_categories = mongo.db["images"].find()
-    return render_template("categories.html", all_categories=all_categories)
+    return render_template("categories.html")
 
 @app.route('/categories/add', methods=["POST"])
 def add_category():
@@ -44,14 +42,14 @@ def add_category():
 
     category_name = request.form["category_name"]
     mongo.db.create_collection(category_name)
-    mongo.db["images"].insert_one(form_values)
+    mongo.db["Categories"].insert_one(form_values)
     return redirect(url_for("get_goals"))
    
  
 @app.route("/goals")
 def get_goals():
     # categories = get_category_names()
-    categories = mongo.db["images"].find()
+    categories = mongo.db["Categories"].find()
     # print(all_categories)
     return render_template("goals.html", categories=categories, category='Goals List')
     
@@ -59,7 +57,7 @@ def get_goals():
 def get_goals_by_category(category):
     goals = mongo.db[category].find()
     # categories = get_category_names()
-    categories = mongo.db["images"].find()
+    categories = mongo.db["Categories"].find()
     return render_template("goals.html", goals=goals, categories=categories, category=category)
 
 
@@ -88,7 +86,6 @@ def add_step(category, goal_id):
         
             return redirect(url_for("goal_details", category=category, goal_id=goal_id))
         else:
-            categories = get_category_names()
             return render_template("add_step.html", goal=the_goal)
 
 
@@ -139,7 +136,7 @@ def add_goal():
         mongo.db[category].insert_one(form_values)
         return redirect("/goals")
     else:
-        categories = get_category_names()
+        categories = mongo.db.Categories.find()
         return render_template("add_goal.html", categories=categories)
 
 

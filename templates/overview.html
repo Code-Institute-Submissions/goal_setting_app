@@ -1,8 +1,25 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3> Goals in Progress </h3>
 
-<h3> Completed Goals </h3>
+<div class="inprogress">
+    <h3> Goals in Progress </h3> <img class="climber_image" src="{{url_for('static', filename='images/climber.png')}}">
+</div>
+{% for goal in unfinished %}
+<div class="inprogress_goals">
+    <p><span><a class = "goal_button" href="#">{{ goal.goal_name }}:</a></span><span>{{ goal.status }}</span></p>
+</div>
+{%endfor%}
 
+</div>
+
+<div class="completed">
+    <h3> Completed Goals </h3>
+
+    <p> Run a marathon: Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
+    <p> Run a marathon: Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
+    <p> Run a marathon: Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
+
+
+</div>
 
 {% endblock %}
