@@ -50,7 +50,7 @@
 }
 
 .done_button {
-    
+
     background-color: #262626;
     color: #009900;
     border: 1px;
@@ -92,7 +92,7 @@
     margin-bottom: 2px;
     background-color: #262626;
     padding: 30px;
-    
+
 
 
 }
@@ -106,6 +106,20 @@
     font-size: 18px;
 
 }
+
+.newgoal {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    background-color: #ff4000;
+    color: white;
+    float: top-right;
+    border: 1px;
+    position: absolute;
+    top: 40px;
+    right: 16px;
+ 
+}
+
 
 
 h3 {
@@ -162,13 +176,18 @@ body {
     }
 }
 
+.accomplishment {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
 
 
-
-.font {
+.goals_div {
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
     color: white;
+    text-align: center;
 }
 
 .goals {

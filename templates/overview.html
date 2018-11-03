@@ -1,6 +1,8 @@
 {% extends 'base.html' %} {% block content %}
 
 
+
+
 <div class="inprogress">
     <h3> Goals in Progress </h3> <img class="climber_image" src="{{url_for('static', filename='images/climber.png')}}">
 </div>
@@ -13,7 +15,7 @@
 </div>
 
 <div class="inprogress">
-    <h3> Completed Goals </h3>
+    <h3> Completed Goals </h3> <img class="climber_image" src="{{url_for('static', filename='images/success.png')}}">
 </div>
 
 <div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>

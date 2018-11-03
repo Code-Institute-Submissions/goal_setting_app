@@ -1,8 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
-<container class="font">
+<div class="inprogress">
+    <h3>{{ category }}</h3> <a href="/add_goal"><button class="newgoal">  Add Goal </button></a>
+</div>
 
-    <h2>{{ category }}</h2>
+
+
+
+
+<div class="inprogress_goals">
 
     {% for category in categories %}
     <a href="{{ url_for ('get_goals_by_category', category=category.category_name) }}">
@@ -21,12 +27,7 @@
         {{goal.goal_reasons}}
     </p>
 
+</div>
 
 
-
-    <br> {% endfor %}
-    <a href="/add_goal"> Add Goal</a>
-
-</container>
-
-{% endblock %}
+<br> {% endfor %} {% endblock %}
