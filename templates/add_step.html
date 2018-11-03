@@ -1,12 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>Add a Step </h3>
-
-<form method="POST">
-  
-    <input type="text" name="step">
+<div class="inprogress">
+    <h3> Add a Step </h3>
+</div>
 
 
 
-<button type="submit"> Add </button> {% endblock %}
-</form>
+<div class="inprogress_goals">
+    <form method="POST">
+        <input type="text" name="step">
+        <button type="submit" class="newstep"> Add </button>
+    </form>
+
+
+</div>
+{% endblock %}

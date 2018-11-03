@@ -1,13 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
+<div class="inprogress">
+    <h3> {{ goal.goal_name }} </h3>
+</div>
 
-
-<container class =goaldetail>
-    <p> Category: {{ goal.category_name }}</p>
-    <p> Goal Name: {{ goal.goal_name }}</p>
-    <p> Why do I want to achieve this goal? {{ goal.goal_reasons }}</p>
-    <p>{{ goal.status }}</p>
-    <h3> Steps: </h3>
+<div class="inprogress_goals">
+    <p class="question"> Category </p>
+    <p>{{ goal.category_name }}</p>
+    </br>
+    <p class="italic">{{ goal.status }}</p>
+    </br>
+    <p class="question"> Why do I want to achieve this goal?</p>
+    <p> {{ goal.goal_reasons }}</p>
+    </br>
+    <p class="question"> Steps </p>
 
     {%for step in goal.steps%}
     <p>{{step.name}} - {{step.is_done}}</p>
@@ -28,5 +34,5 @@
     {% endif %} {%endfor%}
 
     <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}">Add a Step</a></p>
-</container>
+</div>
 {% endblock %}

@@ -19,16 +19,22 @@
 .nav-font:hover {
     font-size: 35px;
     font: bolder;
-    background-color: #ff4000;
-    color: white;
     margin: 6px;
     padding: 5px;
-    border: 1px
+    border: 1px;
+    background-color: #ff4000;
+    color: white;
 }
 
-
-.goaldetail {
+.question {
+    font-size: 35px;
+    font: bolder;
+    margin: 6px;
+    padding: 5px;
+    border: 1px;
+    background-color: #ff4000;
     color: white;
+
 }
 
 .goal_button {
@@ -74,7 +80,6 @@
     background-color: black;
     padding: 20px;
     position: relative;
-    box-shadow: 0px 5px 0px #262626;
     margin-right: 100px;
     margin-left: 100px;
 
@@ -97,6 +102,24 @@
 
 }
 
+
+.goal_form {
+    text-align: center;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    margin-right: 120px;
+    margin-left: 120px;
+    background-color: #ffece6;
+    padding: 50px;
+    color: black;
+
+
+
+}
+
+
+
 .climber_image {
     height: 90px;
     width: 90px;
@@ -117,10 +140,27 @@
     position: absolute;
     top: 40px;
     right: 16px;
+
+}
+
+.newstep {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    background-color: #ff4000;
+    color: white;
+    border: 1px;
+    position: absolute;
  
+
+}
+.italic {
+    font-style: italic;
 }
 
 
+.form {
+    color: white;
+}
 
 h3 {
     text-align: center;
@@ -128,9 +168,10 @@ h3 {
 }
 
 body {
-    background-color: black;
-}
 
+    background-color: black;
+
+}
 
 .tick {
     list-style-image: url('/static/images/donesymbol.png');
@@ -140,6 +181,8 @@ body {
     border-radius: 40px;
 
 }
+
+
 
 .logo {
     font-family: 'Fredoka One', cursive;
@@ -216,7 +259,7 @@ nav {
 
 
 .btn {
-    background-color: blue;
+    background-color: #ff4000;
 
 }
 

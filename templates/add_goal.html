@@ -1,45 +1,50 @@
 {% extends 'base.html' %} {% block content %}
-<h3>Add Goal</h3>
-<div class="row">
-    <form method="POST" class="col s12" enctype='multipart/form-data'>
-        <div class="row">
+<div class="inprogress">
+    <h3>Add Goal</h3>
+</div>
+<div class="goal_form">
+    <div class="row">
+        <form method="POST" class="col s12" enctype='multipart/form-data'>
             <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>
-                    <select id="category" name="category_name">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">poll</i>
+                        <select id="category" name="category_name">
                   <option value="" disabled selected>Choose Category</option>
                   {% for cat in categories %}
                       <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                   {% endfor %}
                 </select>
-                    <label>Goal Category</label>
+                        <label>Goal Category</label>
+                    </div>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">assignment</i>
+                    <input id="goal_name" name="goal_name" type="text">
+                    <label for="icon_prefix">Goal Name</label>
                 </div>
             </div>
-            <div class="input-field col s12">
-                <a class="btn-floating pulse"><i class="material-icons prefix">assignment</i></a>
-                <input id="goal_name" name="goal_name" type="text">
-                <label for="icon_prefix">Goal Name</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">subject</i>
+                    <textarea name="goal_reasons" id="goal_reasons" class="materialize-textarea"></textarea>
+                    <label for="icon_telephone">Goal Reasons</label>
+                </div>
             </div>
-        </div>
-        <div class="input-field col s12">
-            <i class="material-icons prefix">subject</i>
-            <textarea name="goal_reasons" id="goal_reasons" class="materialize-textarea"></textarea>
-            <label for="icon_telephone">Goal Reasons</label>
-        </div>
-</div>
-<div class="row">
-    <div class="input-field col s12">
-        <i class="material-icons prefix">today</i>
-        <input id="due_date" name="due_date" type="text" class="datepicker">
-        <label for="icon_prefix">Due Date</label>
-    </div>
-</div>
-<div class="row">
-    <button class="btn waves-effect waves-light" type="submit">Add Goal
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">today</i>
+                    <input id="due_date" name="due_date" type="text" class="datepicker">
+                    <label for="icon_prefix">Due Date</label>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit">Add Goal
                 <i class="material-icons right">playlist_add</i>
              </button>
-</div>
-</form>
+            </div>
+        </form>
+    </div>
 </div>
 
 {% endblock %}
