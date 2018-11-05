@@ -5,34 +5,34 @@
 </div>
 
 <div class="inprogress_goals">
-    <p class="question"> Goal status </p>
+    <p class="orange_font"> Goal status </p>
 
     <p class="italic">{{ goal.status }}</p>
-    </br>
+    <hr>
     <p class="orange_font"> Why do I want to achieve this goal?</p>
     <p class="italic"> {{ goal.goal_reasons }}</p>
-    </br>
+    <hr>
     <p class="orange_font"> Steps required to complete this goal </p>
 
     {%for step in goal.steps%}
-    <p class="italic">{{step.name}}</p>
-    
+
+    <div><span><p class="italic">{{step.name}}</p>
+  
     {% if step.is_done %}
-    <img src="{{ url_for('static', filename='images/donesymbol.png')}}">
+    <img src="{{ url_for('static', filename='images/donesymbol.png')}}"></span></div>
+
 
     <form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
-        <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Not Done">
+        <input class= "mark_done" type="Submit" value="Mark as Not Done">
     </form>
-
-    {% else %}
+    <hr> {% else %}
 
     <form method="POST" action="{{ url_for('mark_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
-        <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Done">
+        <input class="mark_done" type="Submit" value="Mark as Done">
     </form>
-
-
+    <hr> 
     {% endif %} {%endfor%}
-
+ 
     <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}" class="addstep">Add another step</a></p>
 </div>
 {% endblock %}

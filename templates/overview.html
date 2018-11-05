@@ -1,38 +1,47 @@
 {% extends 'base.html' %} {% block content %}
 
+<img class="responsive-img" src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
 
 
-<div class="row drop_down">
-    <div class="col s5">
+<div class="row absolute"><i> Great plans made. Great things achieved.</i> <br> <b>Track your progress below.<b></div>
+
+<div class="row overview">
+    <div class="col s3">
         <ul class="collapsible">
             <li>
-                <div class="heading collapsible-header">
-                    <p>Your current goals</p>
+                <div class="collapsible-header">
+                    <p class="center">Your current goals<br>  <i class="material-icons">expand_more</i></p>
                 </div>
-                <div class="not_complete overview collapsible-body">
+                <div class="not_complete collapsible-body">
                     {% for goal in unfinished %}
-                    <div class="outline">
+                    <div>
                         <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a>
                         <p class="goal_status">{{ goal.status }}</p>
                         <p>Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></p>
                     </div>
-                    {%endfor%}
+                    <hr> {%endfor%}
                 </div>
             </li>
         </ul>
     </div>
-    <div class="col s2"></div>
-    <div class="col s5 heading">
-        <div class="heading">
-            <p> Your completed goals </p>
-        </div>
-        {% for goal in finished %}
-        <div class="outline">
-            <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a>
-        </div>
-        {%endfor%}
 
 
+    <div class="col s3">
+        <ul class="collapsible">
+            <li>
+                <div class="heading collapsible-header">
+                    <p class="center">Your completed goals<br>  <i class="material-icons">expand_more</i></p>
+                    
+                 
+                </div>
+                <div class="not_complete collapsible-body">
+                    {% for goal in finished %}
+                    <div class="outline">
+                        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a> <img src="{{ url_for('static', filename='images/donesymbol.png')}}">
+                    </div>
+
+                    {%endfor%}
+                </div>
     </div>
 </div>
 
