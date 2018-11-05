@@ -8,6 +8,38 @@
 
 }
 
+.drop_down {
+    margin: 50px;
+    
+}
+
+
+
+.overview {
+    color: white;
+
+}
+
+
+.heading {
+    font-family: 'Roboto Slab', serif;
+   
+    font-size: 30px;
+}
+
+
+
+.not_complete {
+    background-color: #262626;
+
+}
+
+.complete {
+    background-color: #262626;
+}
+
+
+
 .nav-font {
     font-family: 'Roboto Slab', serif;
     font-size: 30px;
@@ -36,6 +68,14 @@
     color: white;
 
 }
+
+.orange_font {
+
+    color: #ff4000;
+
+}
+
+
 
 .goal_button {
 
@@ -98,13 +138,15 @@
     background-color: #262626;
     padding: 30px;
 
-
-
 }
 
+.collapsible-header {
+    background-color: #262626;
+    color: #ff4000;
+}
 
 .goal_form {
-    text-align: center;
+
     height: 100%;
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
@@ -150,11 +192,52 @@
     color: white;
     border: 1px;
     position: absolute;
- 
+
 
 }
-.italic {
+
+.addstep {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    padding: 10px;
+    background-color: black;
+    color: #ff4000;
+    border: 1px;
+    position: relative;
+    margin-top: 15px;
+}
+
+
+.job_title {
+
+    font-size: 25px;
+
+    border-radius: 1px;
+    color: #ff4000;
+
+}
+
+
+
+.goal_status {
+
     font-style: italic;
+
+
+}
+
+.link {
+    font-style: italic;
+    color: white;
+
+}
+
+.job_title:hover {
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    font: bolder;
+
+
 }
 
 
@@ -167,20 +250,12 @@ h3 {
     font: bolder;
 }
 
-body {
 
-    background-color: black;
-
-}
 
 .tick {
     list-style-image: url('/static/images/donesymbol.png');
 }
 
-.btn {
-    border-radius: 40px;
-
-}
 
 
 
@@ -192,6 +267,13 @@ body {
     font-size: 45px;
 }
 
+nav a {
+    color: #B71C1C;
+}
+
+.active {
+    color: #ff4000 !important;
+}
 
 
 
@@ -260,6 +342,7 @@ nav {
 
 .btn {
     background-color: #ff4000;
+    border-radius: 40px;
 
 }
 
@@ -287,4 +370,34 @@ nav {
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
     color: white;
+}
+
+.outline {}
+
+
+
+
+
+
+
+
+
+
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid red;
+    -webkit-box-shadow: 0 1px 0 0 red;
+    box-shadow: 0 1px 0 0 red;
 }

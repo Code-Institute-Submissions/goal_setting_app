@@ -2,32 +2,48 @@
 
 
 
+<div class="row drop_down">
+    <div class="col s5">
+        <ul class="collapsible">
+            <li>
+                <div class="heading collapsible-header">
+                    <p>Your current goals</p>
+                </div>
+                <div class="not_complete overview collapsible-body">
+                    {% for goal in unfinished %}
+                    <div class="outline">
+                        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a>
+                        <p class="goal_status">{{ goal.status }}</p>
+                        <p>Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></p>
+                    </div>
+                    {%endfor%}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col s2"></div>
+    <div class="col s5 heading">
+        <div class="heading">
+            <p> Your completed goals </p>
+        </div>
+        {% for goal in finished %}
+        <div class="outline">
+            <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a>
+        </div>
+        {%endfor%}
 
-<div class="inprogress">
-    <h3> Goals in Progress </h3> <img class="climber_image" src="{{url_for('static', filename='images/climber.png')}}">
-</div>
-{% for goal in unfinished %}
-<div class="inprogress_goals">
-    <p><span><a class = "goal_button" href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}">{{ goal.goal_name }}</a></span><br/><span>{{ goal.status }}</span></p>
-</div>
-{%endfor%}
 
+    </div>
 </div>
 
-<div class="inprogress">
-    <h3> Completed Goals </h3> <img class="climber_image" src="{{url_for('static', filename='images/success.png')}}">
-</div>
 
-<div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>
-    <p>Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
-</div>
-<div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>
-    <p>Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
-</div>
-<div class="inprogress_goals"><a class="done_button" href="#"> Run a marathon: </a><br/>
-    <p>Completed on 31 December 2018 Save 10k - completed on 31 November 2018</p>
-</div>
 
+<!--<ul class="collapsible">-->
+<!--   <li>-->
+<!--     <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>-->
+<!--     <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+<!--   </li>-->
+<!-- </ul>-->
 
 
 {% endblock %}

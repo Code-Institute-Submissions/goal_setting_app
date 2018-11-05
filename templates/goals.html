@@ -17,14 +17,13 @@
         </div>
     </a> {% endfor %} {% for goal in goals %}
 
+
+</div>
+
+<div class="inprogress">
+    <p class="italic"> Select goal for more details </p>
     <p>
         <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="nav-font">{{goal.goal_name}}</a>
-    </p>
-    <p>
-        {{goal.due_date}}
-    </p>
-    <p>
-        {{goal.goal_reasons}}
     </p>
 
 </div>

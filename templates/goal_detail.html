@@ -1,24 +1,24 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="inprogress">
-    <h3> {{ goal.goal_name }} </h3>
+    <h3> Goal: {{ goal.goal_name }} </h3>
 </div>
 
 <div class="inprogress_goals">
-    <p class="question"> Category </p>
-    <p>{{ goal.category_name }}</p>
-    </br>
+    <p class="question"> Goal status </p>
+
     <p class="italic">{{ goal.status }}</p>
     </br>
-    <p class="question"> Why do I want to achieve this goal?</p>
-    <p> {{ goal.goal_reasons }}</p>
+    <p class="orange_font"> Why do I want to achieve this goal?</p>
+    <p class="italic"> {{ goal.goal_reasons }}</p>
     </br>
-    <p class="question"> Steps </p>
+    <p class="orange_font"> Steps required to complete this goal </p>
 
     {%for step in goal.steps%}
-    <p>{{step.name}} - {{step.is_done}}</p>
-
+    <p class="italic">{{step.name}}</p>
+    
     {% if step.is_done %}
+    <img src="{{ url_for('static', filename='images/donesymbol.png')}}">
 
     <form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
         <input class="delete_goal_btn waves-effect waves-light btn btn_small" type="Submit" value="Mark as Not Done">
@@ -33,6 +33,6 @@
 
     {% endif %} {%endfor%}
 
-    <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}">Add a Step</a></p>
+    <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}" class="addstep">Add another step</a></p>
 </div>
 {% endblock %}

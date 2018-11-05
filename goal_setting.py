@@ -21,12 +21,13 @@ def home_page():
 def overview_page():
     categories = mongo.db["Categories"].find()
     
-    goals = []
+    unfinished = []
+    finished = []
     for category in categories:
         category_name = category["category_name"]
-        goals += mongo.db[category_name].find()
-     
-    return render_template("overview.html", unfinished=goals)
+        unfinished += mongo.db[category_name].find({"is_done":False})
+        finished += mongo.db[category_name].find({"is_done":True})
+    return render_template("overview.html", unfinished=unfinished, finished=finished)
     
 @app.route('/categories')
 def get_categories():
@@ -80,7 +81,18 @@ def add_step(category, goal_id):
             
             current_steps = the_goal.get("steps", [])
             current_steps.append(step)
+            
+            
+            done=0
+            for step in current_steps:
+                if step["is_done"]:
+                    done+=1
+            
+            the_goal["status"]= "So far, you have completed {0} out of {1} steps".format(done, len(the_goal["steps"])) 
+            the_goal["is_done"] = False
+            
             the_goal["steps"] = current_steps
+            
             
             mongo.db[category].update({"_id":ObjectId(goal_id)},the_goal)
         
@@ -100,9 +112,11 @@ def mark_done(category, goal_id, step_id):
             step["is_done"] = True
         if step["is_done"]:
             done+=1
-            
-    the_goal["status"]="You have completed {0} out of {1} steps".format(done, len(the_goal["steps"]))
     
+    num_steps = len(the_goal["steps"])
+    
+    the_goal["status"]= "So far, you have completed {0} out of {1} steps".format(done, num_steps)
+    the_goal["is_done"] = done==num_steps
     mongo.db[category].update({"_id":ObjectId(goal_id)},the_goal)
     
     return redirect(url_for("goal_details", category=category, goal_id=goal_id))
@@ -111,11 +125,15 @@ def mark_done(category, goal_id, step_id):
 def mark_not_done(category, goal_id, step_id):
     the_goal = mongo.db[category].find_one({"_id": ObjectId(goal_id)})
     
+    done=0
     for step in the_goal["steps"]:
         if step["_id"]==ObjectId(step_id):
             step["is_done"] = False
+        if step["is_done"]:
+            done+=1
         
-    
+    the_goal["status"]= "So far, you have completed {0} out of {1} steps".format(done, len(the_goal["steps"]))
+    the_goal["is_done"] = False
     mongo.db[category].update({"_id":ObjectId(goal_id)},the_goal)
     
     return redirect(url_for("goal_details", category=category, goal_id=goal_id))
