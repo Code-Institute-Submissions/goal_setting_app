@@ -1,32 +1,49 @@
 {% extends 'base.html' %} {% block content %}
+<div class="row">
+    <div class="col s12 center">
 
-<div class="inprogress">
-    <h3>{{ category }}</h3> <a href="/add_goal"><button class="newgoal">  Add Goal </button></a>
-</div>
+        <h3>{{ category }} </h3><br>
+        <p>View individual goals by selecting their category below </p><a href="/add_goal"><button class="newgoal">  Add Goal </button></a> 
+        
+        {% for category in categories %}
+        
+        
+        
+        
+        <button type="button" data-toggle="modal"> <a href="{{ url_for ('get_goals_by_category', category=category.category_name) }}">
+            <div class="category-label"><img class="small-img" src="{{category.image}}">
+                <p class="category-title">{{ category.category_name }}</p>
+            </div>
+        </a> </button>{% endfor %}
 
 
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">{{ category.category_name }}</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        {% for goal in goals %}
 
 
+                        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a> <br> {% endfor %}
 
-<div class="inprogress_goals">
 
-    {% for category in categories %}
-    <a href="{{ url_for ('get_goals_by_category', category=category.category_name) }}">
-        <div class="category-label"><img class="small-img" src="{{category.image}}">
-            <p class="category-title">{{ category.category_name }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </a> {% endfor %} {% for goal in goals %}
-
-
+    </div>
 </div>
-
-<div class="inprogress">
-    <p class="italic"> Select goal for more details </p>
-    <p>
-        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="nav-font">{{goal.goal_name}}</a>
-    </p>
-
 </div>
-
-
-<br> {% endfor %} {% endblock %}
+{% endblock %}

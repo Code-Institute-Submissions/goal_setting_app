@@ -1,58 +1,121 @@
 {% extends 'base.html' %} {% block content %}
 
-<img class="responsive-img" src="{{url_for('static', filename='images/goal_home_image.jpg')}}">
+<div class="goal_img"></div>
 
 
-<div class="row absolute"><i> Great plans made. Great things achieved.</i> <br> <b>Track your progress below.<b></div>
+<div class="row arrow tagline">
+    <div class="col s2"></div>
+    <div class="col s8"><b>Goal Keeper</b> helps make the process of setting and tracking your goals simple. Create plans, track progress, get results!
+        <p>Check your progress below!<br>
+            <a href='#goals'><i class="fas fa-angle-double-down font_awesome"></i></a></p>
+    </div>
+    <div class="col s2"></div>
+</div>
 
-<div class="row overview">
-    <div class="col s3">
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header">
-                    <p class="center">Your current goals<br>  <i class="material-icons">expand_more</i></p>
-                </div>
-                <div class="not_complete collapsible-body">
-                    {% for goal in unfinished %}
-                    <div>
-                        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a>
-                        <p class="goal_status">{{ goal.status }}</p>
-                        <p>Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></p>
-                    </div>
-                    <hr> {%endfor%}
-                </div>
-            </li>
-        </ul>
+
+
+
+
+<!--<div class="row">-->
+<!--    <div class="col s12">-->
+<!--        <h2>Why set goals with Goal Getter?</h2>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="heading">Why set goals with Goal Keeper?</div>
+
+<div class="row">
+
+    <div class="col s4 reasons_for_goal_getter">
+        <img src="{{ url_for('static', filename='images/focus.jpg')}}" class="vector_img"><br>
+
+        <b>Clearer Focus</b>
+        <div class="reasons_paragraph">Properly thought out and stated, goals clearly set out your intentions and desires; the things you really want to achieve.</div>
     </div>
 
+    <div class="col s4 reasons_for_goal_getter">
+        <img src="{{ url_for('static', filename='images/peace_of_mind.jpg')}}" class="vector_img"><br>
+        <b>Peace of mind</b>
+        <div class="reasons_paragraph">Too often you can have many things on your mind. Writing down your goals can help you take all of those ideas, apply perspective and priority, then galvanize you into commitment and action.</div>
+    </div>
 
-    <div class="col s3">
-        <ul class="collapsible">
-            <li>
-                <div class="heading collapsible-header">
-                    <p class="center">Your completed goals<br>  <i class="material-icons">expand_more</i></p>
-                    
-                 
-                </div>
-                <div class="not_complete collapsible-body">
-                    {% for goal in finished %}
-                    <div class="outline">
-                        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="job_title">{{ goal.goal_name }}</a> <img src="{{ url_for('static', filename='images/donesymbol.png')}}">
-                    </div>
-
-                    {%endfor%}
-                </div>
+    <div class="col s4 reasons_for_goal_getter">
+        <img src="{{ url_for('static', filename='images/measure_progress.jpg')}}" class="vector_img"><br>
+        <b>Measure your progress</b>
+        <div class="reasons_paragraph">Setting goals allows you to measure how well effectively you are moving towards achieving them.</div>
     </div>
 </div>
 
 
 
-<!--<ul class="collapsible">-->
-<!--   <li>-->
-<!--     <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>-->
-<!--     <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
-<!--   </li>-->
-<!-- </ul>-->
 
+<div class="row" id="goals">
+    <div class="col s4 offset-s2">
+
+        <img src="{{ url_for('static', filename='images/in_progress.jpg')}}">
+        <div class="goal_name">Current goals</div>
+
+
+        {% for goal in unfinished %}
+
+        <dl>
+            <dt><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a></dt>
+            <dd> {{ goal.status }}!</dd>
+            <dd> Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></dd>
+        </dl>
+        {%endfor%}
+    </div>
+
+    <div class="col s4">
+        <img src="{{ url_for('static', filename='images/complete.jpg')}}">
+        <div class="goal_name">Completed goals</div>
+
+        {% for goal in finished %}
+
+        <ul>
+            <li><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</a></b>
+            </li>
+        </ul> {%endfor%}
+
+    </div>
+    <div class="col s2"></div>
+</div>
+</div>
+
+
+
+<!--<div class="row tagline_position">-->
+<!--    <div class="col s4"></div>-->
+<!--    <div class="col s8">-->
+<!--        <div><i>Great plans made. Great things achieved.</i><br>Simply record your goals in the goal section and track your progress below.</div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="row overview_position">-->
+<!--    <div class="col s4"></div>-->
+<!--    <div class="col s4 inprogress_goals">-->
+<!--        <div class="goal_name">Current goals</div>-->
+<!--        <hr> {% for goal in unfinished %}-->
+
+<!--        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal">{{ goal.goal_name }}</a>-->
+
+<!--        <div class="goal_descritpion">-->
+<!--            <b> {{ goal.status }}!</b>-->
+<!--            <br> Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link">here</a>-->
+<!--            <hr>-->
+<!--        </div>-->
+<!--        {%endfor%}-->
+<!--    </div>-->
+<!--    <div class="col s4 inprogress_goals">-->
+<!--        <div class="goal_name">Completed goals</div>-->
+
+<!--        {% for goal in finished %}-->
+
+<!--        <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"> {{goal.goal_name}}-->
+
+<!--</a><img src="{{ url_for('static', filename='images/donesymbol.png')}}">-->
+<!--        <hr> {%endfor%}-->
+
+<!--    </div>-->
+<!--</div>-->
 
 {% endblock %}

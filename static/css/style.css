@@ -1,22 +1,35 @@
+p {
+    font-size: 2em;
+
+}
+
+.heading {
+    padding-top: 5%;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+
+
 .intro {
     text-align: left;
     color: black;
     position: absolute;
     top: 15%;
     left: 10%;
-    font-family: 'Roboto Slab', serif;
-
+    /*font-family: 'Roboto Slab', serif;*/
 }
 
-.tagline {
-    font-size: 20px;
-}
+
 
 
 .center {
     text-align: center;
-    margin-left: 70px;
+    /*margin-left: 70px;*/
 }
+
 .continue {
     font-size: 25px;
     font: bolder;
@@ -28,14 +41,34 @@
 
 }
 
+p {
+    font-size: 25px;
+}
+
 .absolute {
     position: absolute;
-    top: 100px;
+    top: 50px;
     width: 100%;
     font-size: 30px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 15%;
     text-align: center;
+}
+
+.tagline_position {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+
+.overview_position {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+
 }
 
 
@@ -61,21 +94,22 @@
 
 
 .nav-font {
-    font-family: 'Roboto Slab', serif;
-    font-size: 30px;
-    margin: 5px;
-    color: #ff4000;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 20px;
+    /*margin: 5px;*/
+    color: black;
+    /*color: #ff4000;*/
+}
 
+.row {
+    padding-top: 1rem;
 }
 
 .nav-font:hover {
-    font-size: 35px;
+    font-size: 25px;
     font: bolder;
-    margin: 6px;
-    padding: 5px;
-    border: 1px;
-    background-color: #ff4000;
-    color: white;
+    background-color: white;
+
 }
 
 .question {
@@ -95,6 +129,10 @@
 
 }
 
+.center {
+    text-align: center;
+    margin-left: 0px;
+}
 
 
 .goal_button {
@@ -132,38 +170,154 @@
 
 }
 
-.inprogress {
-    height: 100%;
-    font-size: 25px;
-    color: white;
-    background-color: black;
-    padding: 20px;
-    position: relative;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-top: 50px;
+.arrow {
 
+    position: absolute;
+    top: 2%;
+    /*left: 15%;*/
+    margin: 0 auto;
+    text-align: center;
+    animation: jump 5s infinite;
+}
+
+.tagline {
+    font-size: 2em;
+    /*left: 10%;*/
+}
+
+.font_awesome {
+    /*color: #ff4000;*/
+    color: black;
+}
+
+
+
+/*fas fa-angle-double-down {*/
+
+/*    height: 10px;*/
+
+/*}*/
+
+.inprogress_goals {
+    /*text-align: left;*/
+    height: 100%!important;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 1em;
+    color: black;
+    /*margin-right: 100px;*/
+    /*margin-bottom: 2px;*/
+    /*background-color: #e6e6e6;*/
+    /*background-color: white;*/
+    /*opacity: 0.8;*/
+    /*padding: 30px;*/
+    /*position: absolute;*/
+    /*top: 150px;*/
+    /*width: 50%;*/
+    /*float: center;*/
+}
+
+.vector_img {
+    padding-bottom: 9%;
+    border-radius: 50%;
+}
+
+h2 {
+    text-align: center;
+}
+
+#goals {
+    background-color: white;
+    padding-top: 1rem!important;
+    text-align: center;
+}
+
+.current_goal {
+
+    color: black;
+    background-color: transparent;
+    line-height: 2;
+    /*font-family: "Roboto", sans-serif;*/
+}
+
+.current_goal:hover {
+    font-size: 20px;
 
 }
 
-.inprogress_goals {
+.row {
+    padding-top: 3rem;
+
+}
+
+
+.form {
+    background-color: white;
+}
+
+.col {
+
+    padding: 3rem!important;
+    /*margin-left: 20%!important;*/
+}
+
+.goal_detail {
+    position: absolute;
+    margin-left: 20%;
+    top: 15%;
+    width: 60%;
+    float: center;
+}
+
+.goal_img {
+
+    background-attachment: fixed;
+    background-image: url("../images/goal_img4.jpg");
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+
+
+
+
+.goal_name {
+    font-size: 2.5em;
     text-align: center;
-    height: 100%;
-    font-family: 'Roboto Slab', serif;
-    font-size: 25px;
-    color: black;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin-bottom: 2px;
+    font-weight: 300;
+    padding-bottom: 15px;
+    /*text-shadow: 2px 4px 3px #ff4000;*/
+}
+
+body {
     background-color: #e6e6e6;
-    padding: 30px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+
+.reasons_for_goal_getter {
+
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.reasons_paragraph {
+    padding-top: 10px;
 
 }
 
 .collapsible-header {
     background-color: #e6e6e6;
     color: black;
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
     font-size: 20px;
     padding: 0px;
 }
@@ -173,14 +327,15 @@
 }
 
 
+
 body {
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
 }
 
 .goal_form {
 
     height: 100%;
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
     font-size: 25px;
     margin-right: 120px;
     margin-left: 120px;
@@ -205,41 +360,67 @@ body {
 }
 
 .newgoal {
-    font-family: 'Roboto Slab', serif;
-    font-size: 30px;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 1.5em;
     background-color: #ff4000;
     color: white;
-    float: top-right;
+    /*float: top-right;*/
     border: 1px;
     position: absolute;
-    top: 40px;
+    top: 15%;
     right: 20px;
 
 }
 
-.mark_done {
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+.new_goal_button_on_form {
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 30px;
+    background-color: #ff4000;
     color: white;
     border: 1px;
     position: absolute;
-    right: 10%;
-    background-color: #ff4000;
 
+}
+
+
+.mark_done {
+
+    /*font-size: 2em;*/
+    color: #ff4000;
+
+    /*border: 1em;*/
+    border: none;
+    /*right: 10%;*/
+    background-color: white;
+    padding: 0px;
+}
+
+.mark_done:hover {
+
+    background-color: #ff4000;
+    opacity: 0.8;
+    color: white;
 
 }
 
 .addstep {
-    font-family: 'Roboto Slab', serif;
-    font-size: 30px;
-    padding: 10px;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 15px;
+    padding: 5px;
     background-color: black;
-    color: #ff4000;
+    color: #FF6C39;
     border: 1px;
-    position: relative;
-    margin-top: 15px;
 }
 
+.addstep:hover {
+    opacity: 0.8;
+
+}
+
+
+.tick {
+    float: right;
+}
 
 .job_title {
 
@@ -259,14 +440,9 @@ body {
 
 }
 
-.link {
-    font-style: italic;
-
-
-}
 
 .job_title:hover {
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
     font-size: 30px;
     font: bolder;
 
@@ -295,13 +471,25 @@ h3 {
     font-family: 'Fredoka One', cursive;
     margin-left: 10px;
     margin-top: 10px;
-    color: #ff4000;
-    font-size: 45px;
+    /*color: #ff4000;*/
+    font-size: 25px;
+    color: black;
 }
 
 nav a {
     color: #ff4000;
 }
+
+.link {
+    color: black;
+    font-style: italic;
+}
+
+.link:hover {
+    font-size: 1.2em;
+
+}
+
 
 .active {
     color: #ff4000 !important;
@@ -341,7 +529,7 @@ nav a {
 
 
 .goals_div {
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
     font-size: 25px;
     color: white;
     text-align: center;
@@ -359,11 +547,11 @@ nav a {
 
 }
 
-nav {
-    height: 80px;
+/*nav {*/
 
-}
+/*    height: 80px;*/
 
+/*}*/
 
 .card_size {
     width: 25%;
@@ -390,7 +578,7 @@ nav {
     height: 240px;
     position: relative;
     display: inline-block;
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
     font-size: 25px;
     color: white;
 }
@@ -398,17 +586,15 @@ nav {
 .category-title {
     font-weight: bold;
     text-align: center;
-    font-family: 'Roboto Slab', serif;
+    /*font-family: 'Roboto Slab', serif;*/
     font-size: 25px;
     color: black;
 }
 
 
+/*------------------------------Goal Detail Page---------------------------------------------*/
 
-
-
-
-
+/*------------------------------------------------------------------------------------------------*/
 
 input:not([type]):focus:not([readonly]),
 input[type=text]:not(.browser-default):focus:not([readonly]),

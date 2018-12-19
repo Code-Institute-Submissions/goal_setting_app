@@ -1,39 +1,40 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="inprogress">
+<div class="row">
     <h3> New Category </h3>
 </div>
 
-<div class="inprogress_goals">
+<div class="row">
+    <div class="col s8 offset-s2 form">
 
-    <form action="categories/add" method="POST" class="col s12" enctype="multipart/form-data">
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="category_name" name="category_name" type="text">
-                <label for="icon_prefix">Category Name</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>Image</span>
-                    <input type="file" name="image">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
+        <form action="categories/add" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="input-field">
+                    <input id="category_name" name="category_name" type="text">
+                    <label for="icon_prefix">Category Name</label>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <button class="btn waves-effect waves-light" type="submit">Add Category
+            <div class="row">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Upload Image</span>
+                        <input type="file" name="image">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit">Add Category
              </button>
-        </div>
-    </form>
+            </div>
+        </form>
 
 
-
+    </div>
 </div>
 
 

@@ -13,11 +13,11 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
-@app.route("/")
-def home_page():
-    return render_template("home.html")
+# @app.route("/")
+# def home_page():
+#     return render_template("home.html")
     
-@app.route("/overview")
+@app.route("/")
 def overview_page():
     categories = mongo.db["Categories"].find()
     
@@ -49,15 +49,12 @@ def add_category():
  
 @app.route("/goals")
 def get_goals():
-    # categories = get_category_names()
     categories = mongo.db["Categories"].find()
-    # print(all_categories)
-    return render_template("goals.html", categories=categories, category='Goals List')
+    return render_template("goals.html", categories=categories, category='Goals')
     
 @app.route("/goals/<category>")
 def get_goals_by_category(category):
     goals = mongo.db[category].find()
-    # categories = get_category_names()
     categories = mongo.db["Categories"].find()
     return render_template("goals.html", goals=goals, categories=categories, category=category)
 
@@ -78,8 +75,15 @@ def add_step(category, goal_id):
                 "name": request.form["step"],
                 "is_done": False
             }
+            if 'steps' in the_goal:
+                current_steps = the_goal['steps']
+            else:
+                
+                the_goal['steps'] = []
+                current_steps = the_goal['steps']
+                
             
-            current_steps = the_goal.get("steps", [])
+            
             current_steps.append(step)
             
             
