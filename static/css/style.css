@@ -4,14 +4,26 @@ p {
 }
 
 .heading {
-    padding-top: 5%;
+    padding: 2%;
     font-size: 2.5em;
     text-align: center;
     font-weight: 300;
 
 }
 
+.add_category {
 
+    /*background-color: transparent;*/
+    position: absolute;
+
+    margin-left: 20%;
+    padding: 70px;
+    top: 5%;
+    width: 60%;
+
+    float: left;
+    background-color: white;
+}
 
 .intro {
     text-align: left;
@@ -28,6 +40,7 @@ p {
 .center {
     text-align: center;
     /*margin-left: 70px;*/
+    
 }
 
 .continue {
@@ -53,6 +66,7 @@ p {
     margin-left: 15%;
     text-align: center;
 }
+
 
 .tagline_position {
     position: absolute;
@@ -175,7 +189,7 @@ p {
     position: absolute;
     top: 2%;
     /*left: 15%;*/
-    margin: 0 auto;
+    margin: 4%;
     text-align: center;
     animation: jump 5s infinite;
 }
@@ -192,32 +206,8 @@ p {
 
 
 
-/*fas fa-angle-double-down {*/
-
-/*    height: 10px;*/
-
-/*}*/
-
-.inprogress_goals {
-    /*text-align: left;*/
-    height: 100%!important;
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 1em;
-    color: black;
-    /*margin-right: 100px;*/
-    /*margin-bottom: 2px;*/
-    /*background-color: #e6e6e6;*/
-    /*background-color: white;*/
-    /*opacity: 0.8;*/
-    /*padding: 30px;*/
-    /*position: absolute;*/
-    /*top: 150px;*/
-    /*width: 50%;*/
-    /*float: center;*/
-}
-
 .vector_img {
-    padding-bottom: 9%;
+    /*padding-bottom: 5%;*/
     border-radius: 50%;
 }
 
@@ -240,7 +230,7 @@ h2 {
 }
 
 .current_goal:hover {
-    font-size: 20px;
+    font-size: 30px;
 
 }
 
@@ -254,18 +244,23 @@ h2 {
     background-color: white;
 }
 
-.col {
+/*.col {*/
 
-    padding: 3rem!important;
-    /*margin-left: 20%!important;*/
-}
+/*    padding: 3rem!important;*/
+
+/*margin-left: 20%!important;*/
+
+/*}*/
 
 .goal_detail {
     position: absolute;
-    margin-left: 20%;
-    top: 15%;
+    margin-left: 0%;
+    padding: 70px;
+    top: 0%;
     width: 60%;
-    float: center;
+
+    float: left;
+    background-color: white;
 }
 
 .goal_img {
@@ -282,24 +277,85 @@ h2 {
     z-index: 1;
 }
 
+.step_img {
+
+    background-attachment: fixed;
+    background-image: url("../images/step.jpg");
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+.step_form {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+}
+
+.goal_detail_img {
+    background-attachment: fixed;
+    background-image: url("../images/mountain.jpg");
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0px;
+    z-index: 1;
+
+}
 
 
+.goal_detail_paragraph {
+    font-size: 1.5em;
 
+}
 
 .goal_name {
     font-size: 2.5em;
     text-align: center;
     font-weight: 300;
+
+    margin-top: 10%;
     padding-bottom: 15px;
     /*text-shadow: 2px 4px 3px #ff4000;*/
 }
+
+
+.categories_img {
+    background-attachment: fixed;
+    background-image: url("../images/categories.jpg");
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0px;
+    z-index: 1;
+
+}
+
 
 body {
     background-color: #e6e6e6;
     font-family: "Roboto", sans-serif;
 
+
 }
 
+.container .row {
+    margin-left: -3.55rem;
+    margin-right: -3.55rem;
+    /*background-color:white;*/
+    margin-top: 2rem;
+}
 
 .reasons_for_goal_getter {
 
@@ -310,7 +366,11 @@ body {
 }
 
 .reasons_paragraph {
-    padding-top: 10px;
+    padding-top: 5px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    margin: 10px;
+    font-size: 1em;
 
 }
 
@@ -362,10 +422,11 @@ body {
 .newgoal {
     /*font-family: 'Roboto Slab', serif;*/
     font-size: 1.5em;
-    background-color: #ff4000;
-    color: white;
+    /*background-color: #ff4000;*/
+    color: black;
     /*float: top-right;*/
-    border: 1px;
+    /*border: 1px;*/
+    border: none;
     position: absolute;
     top: 15%;
     right: 20px;
@@ -385,21 +446,19 @@ body {
 
 .mark_done {
 
-    /*font-size: 2em;*/
-    color: #ff4000;
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 15px;
+    padding: 5px;
+    background-color: black;
+    color: #FF6C39;
+    border: 1px;
 
-    /*border: 1em;*/
-    border: none;
-    /*right: 10%;*/
-    background-color: white;
-    padding: 0px;
 }
 
 .mark_done:hover {
 
-    background-color: #ff4000;
     opacity: 0.8;
-    color: white;
+
 
 }
 
@@ -419,7 +478,9 @@ body {
 
 
 .tick {
-    float: right;
+    /*float: right;*/
+    /*float: left;*/
+    left: 10%;
 }
 
 .job_title {
@@ -478,6 +539,11 @@ h3 {
 
 nav a {
     color: #ff4000;
+}
+
+button {
+    border: none;
+    background-color: transparent;
 }
 
 .link {
@@ -566,8 +632,8 @@ nav a {
 }
 
 .small-img {
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
 
 
@@ -612,4 +678,84 @@ textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid red;
     -webkit-box-shadow: 0 1px 0 0 red;
     box-shadow: 0 1px 0 0 red;
+}
+
+.modal {
+    position: absolute;
+    top: 26%;
+    overflow: hidden;
+    height: auto;
+    width: 70%;
+    /*height: 40%;*/
+}
+
+.modal_img {
+    background-attachment: fixed;
+    background-image: url("../images/modal.jpg");
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    height: 100vw;
+    width: 100vw;
+    margin-bottom: 0px;
+
+    z-index: 1;
+    background-repeat: no-repeat;
+
+}
+
+
+.modal_img_2 {
+
+    width: 100%;
+    height: 100%;
+    overerflow: auto;
+    margin: 0 auto;
+
+
+}
+
+.no_padding {
+    padding: 0px!important;
+    margin: 0px!important;
+
+}
+
+/*.row .col.s6 {*/
+
+/*    margin-left: 50px;*/
+
+/*}*/
+
+.row .col {
+
+
+    padding: 0px!important;
+    margin: 0px!important;
+
+
+}
+
+.close_modal {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+
+
+/*.row .col.s6 {*/
+
+/*    width: 50%;*/
+
+/*    margin-left: 50px;*/
+
+/*    left: auto;*/
+
+/*    right: auto;*/
+
+/*}*/
+
+.modal .modal-content {
+    padding: 0px;
 }

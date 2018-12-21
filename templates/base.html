@@ -20,15 +20,16 @@
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <a class="logo hide-on-small-only"> Goal Keeper </a>
+                    <a class="logo hide-on-small-only" href="{{ url_for('overview_page') }}"> Goal Keeper </a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                   
+
+                        <li><a class="nav-font" href="{{ url_for('get_goals') }}">Get Started</a></li>
                         <li><a class="nav-font" href="{{ url_for('get_goals') }}">Goals</a></li>
                         <li><a class="nav-font" href="/categories">Add Category</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-              
+
                         <li><a class="nav-font" href="{{ url_for('get_goals') }}">Goals</a></li>
                         <li><a class="nav-font" href="/categories">Add Category</a></li>
                     </ul>

@@ -1,43 +1,54 @@
 {% extends 'base.html' %} {% block content %}
 <!--<img class="responsive-img goal_img" src="{{url_for('static', filename='images/goal_detail2.jpg')}}">-->
 
+<div class="goal_detail_img"></div>
 
-<div class="row">
+<div class="goal_detail_img"></div>
 
-    <div class="col s6 offset-s3 inprogress_goals">
-        <div class="center">
-            <div class="goal_name">{{ goal.goal_name }}</div> Hi there! <b>{{ goal.status }}.</b> Keep it up!
-            <br> Remember, why are you doing this?<b> {{ goal.goal_reasons }}!</b>
+
+
+<div class="row goal_detail">
+    <div class="col s1"></div>
+
+    <div class="col s10">
+
+        <div class="goal_name">{{ goal.goal_name }}</div>
+        <div class="goal_detail_paragraph">Hi there! <b>{{ goal.status }}.</b> Keep it up!
+            <p></p> Remember, why are you doing this?<b> {{ goal.goal_reasons }}!</b>
 
             <p></p>
             <div>Simply complete these steps to acheive this goal:</div>
 
+
             <p></p>
-        </div>
+            <!--</div>-->
 
-        {%for step in goal.steps%}
+            {%for step in goal.steps%}
 
-        <div><span><b>{{step.name}}</b>
+            <div><span><b>{{step.name}}</b>
   
     {% if step.is_done %}
     <img src="{{ url_for('static', filename='images/donesymbol.png')}}" class="tick"></span>
 
 
-            <form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
-                <input class="mark_done" type="Submit" value="Mark as Not Done">
-            </form>
-            <hr> {% else %}
+                <form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
+                    <input class="mark_done" type="Submit" value="Mark as Not Done">
+                </form>
+                <hr> {% else %}
 
-            <form method="POST" action="{{ url_for('mark_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
-                <input class="mark_done" type="Submit" value="Mark as Done">
-            </form>
-            <hr>
+                <form method="POST" action="{{ url_for('mark_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
+                    <input class="mark_done" type="Submit" value="Mark as Done">
+                </form>
+                <hr>
+
+            </div>
+
+
+
+            {% endif %} {%endfor%}
+
+            <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}" class="addstep"><i class="fas fa-plus"> STEP</i></a></p>
         </div>
-
-        {% endif %} {%endfor%}
-
-        <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}" class="addstep"><i class="fas fa-plus"> STEP</i></a></p>
     </div>
 </div>
-
 {% endblock %}

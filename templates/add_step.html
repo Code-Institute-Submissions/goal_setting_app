@@ -1,17 +1,24 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="inprogress">
-    <h3> Add a Step </h3>
-</div>
+<div class="step_img"></div>
 
 
 
-<div class="inprogress_goals">
-    <form method="POST">
-        <input type="text" name="step">
-        <button type="submit" class="newstep"> Add </button>
-    </form>
+<div class="step_form">
+    <div>
+       
+        <h3> Add a Step to Your Goal "{{ goal.goal_name }}"</h3>
+    </div>
 
 
+
+    <div>
+        <form method="POST">
+            <input type="text" name="step">
+            <button type="submit" class="newstep"> Add </button>
+        </form>
+
+
+    </div>
 </div>
 {% endblock %}
