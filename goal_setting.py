@@ -13,10 +13,6 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
-# @app.route("/")
-# def home_page():
-#     return render_template("home.html")
-    
 @app.route("/")
 def overview_page():
     categories = mongo.db["Categories"].find()
@@ -28,6 +24,21 @@ def overview_page():
         unfinished += mongo.db[category_name].find({"is_done":False})
         finished += mongo.db[category_name].find({"is_done":True})
     return render_template("overview.html", unfinished=unfinished, finished=finished)
+    
+    
+    
+@app.route("/progress")
+def progress_page():
+    categories = mongo.db["Categories"].find()
+    
+    unfinished = []
+    finished = []
+    for category in categories:
+        category_name = category["category_name"]
+        unfinished += mongo.db[category_name].find({"is_done":False})
+        finished += mongo.db[category_name].find({"is_done":True})
+    return render_template("progress.html", unfinished=unfinished, finished=finished)
+    
     
 @app.route('/categories')
 def get_categories():

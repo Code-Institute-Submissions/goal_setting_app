@@ -41,8 +41,32 @@ nav ul a {
     color: black;
 }
 
+/*-----------------------get started section---------------------*/
 
-
+.arrow2 {
+    
+    position: relative;
+    font-size: 49px;
+    text-align: center;
+    transform: rotate(270deg);
+    animation: bouncearrow 1s infinite;
+    
+    }
+    
+        
+    @keyframes bouncearrow {
+     0%{left:0px;}
+     50%{left:20px;}
+     100%{left:0px;}
+    }
+    
+    
+    /*@keyframes bouncearrow {*/
+    /* 0%{top:0px;}*/
+    /* 50%{top:20px;}*/
+    /* 100%{top:0px;}*/
+    /*}*/
+    
 .get_started {
     position: absolute;
     left: 1%;
@@ -50,9 +74,17 @@ nav ul a {
     line-height: 22px;
     margin-top: 5px;
 
-
-
 }
+
+.number {
+    font-size: 4rem;
+    font-family: 'Pacifico', cursive;
+}
+
+
+/*-----------------------get started end---------------------*/
+
+
 
 .test {
 
@@ -428,10 +460,11 @@ body {
 
 .reasons_for_goal_getter {
 
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     padding: 10px;
     padding-top: 0px;
+    height: 350px;
 }
 
 .reasons_paragraph {
@@ -465,8 +498,11 @@ body {
 /*--------goal page --------------*/
 
 /*a {*/
+
 /*    background-color: white!important;*/
+
 /*    color: white!important;*/
+
 /*}*/
 
 .goal_form {
@@ -508,6 +544,28 @@ body {
 
 
 /*--------goal page end--------------*/
+
+/*--------progress page --------------*/
+
+.white {
+    background-color: white;
+    text-align: center;
+}
+
+
+/*--------progress page end--------------*/
+
+/*--------get started page--------------*/
+
+.circle {
+    border-radius: 50%;
+}
+
+#get_started {
+    background-color: white;
+}
+
+/*--------get started page end--------------*/
 
 .climber_image {
     height: 90px;

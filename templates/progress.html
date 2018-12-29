@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+
+
+
+<div class="row white">
+
+ <div class="row heading">Your Progress</div>
+ <div class="col s2"></div>
+ <div class="col s4">
+
+  <img src="{{ url_for('static', filename='images/in_progress.jpg')}}">
+  <div class="goal_name">Current goals</div>
+
+
+  {% for goal in unfinished %}
+
+  <dl>
+   <dt><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a></dt>
+   <dd> {{ goal.status }}!</dd>
+   <dd> Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></dd>
+  </dl>
+  {%endfor%}
+ </div>
+
+ <div class="col s4">
+  <img src="{{ url_for('static', filename='images/complete.jpg')}}">
+  <div class="goal_name">Completed goals</div>
+
+  {% for goal in finished %}
+
+  <ul>
+   <li><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</a></b>
+   </li>
+  </ul> {%endfor%}
+
+ </div>
+ <div class="col s2"></div>
+</div>
+</div>
+
+
+
+
+{% endblock %}
