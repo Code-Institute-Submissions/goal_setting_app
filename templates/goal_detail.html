@@ -13,6 +13,9 @@
     <div class="col s10">
 
         <div class="goal_name">{{ goal.goal_name }}</div>
+        
+        
+        
         <div class="goal_detail_paragraph">Hi there! <b>{{ goal.status }}.</b> Keep it up!
             <p></p> Remember, why are you doing this?<b> {{ goal.goal_reasons }}!</b>
 
@@ -46,6 +49,7 @@
 
 
             {% endif %} {%endfor%}
+            
 
             <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}" class="addstep"><i class="fas fa-plus"> STEP</i></a></p>
         </div>

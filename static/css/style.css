@@ -3,6 +3,87 @@ p {
 
 }
 
+/*.collapsible {*/
+
+/*    text-align: center;*/
+
+/*}*/
+
+.collapsible-header {
+    padding-left: 15%!important;
+
+}
+
+.collapsible-header:hover {
+    color: #ff4000;
+
+}
+
+.collapsible-body {
+
+    color: black!important;
+    padding: 1rem;
+    font-size: 1.2em!important;
+}
+
+
+nav ul a {
+    color: black;
+}
+
+.dropdown-content {
+    top: 60px!important;
+
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: black;
+}
+
+
+
+.get_started {
+    position: absolute;
+    left: 1%;
+    top: 3%;
+    line-height: 22px;
+    margin-top: 5px;
+
+
+
+}
+
+.test {
+
+    width: 300px;
+
+}
+
+
+
+/*.get_started_paragraph {*/
+
+/*    width: 100%;*/
+
+/*}*/
+
+.arrow {
+
+    position: absolute;
+    top: 5%;
+    /*left: 15%;*/
+    margin: 4%;
+    text-align: center;
+    animation: jump 5s infinite;
+}
+
+.tagline {
+    font-size: 2em;
+    /*left: 10%;*/
+}
+
+
 .heading {
     padding: 2%;
     font-size: 2.5em;
@@ -10,6 +91,8 @@ p {
     font-weight: 300;
 
 }
+
+
 
 .add_category {
 
@@ -40,7 +123,6 @@ p {
 .center {
     text-align: center;
     /*margin-left: 70px;*/
-    
 }
 
 .continue {
@@ -184,20 +266,7 @@ p {
 
 }
 
-.arrow {
 
-    position: absolute;
-    top: 2%;
-    /*left: 15%;*/
-    margin: 4%;
-    text-align: center;
-    animation: jump 5s infinite;
-}
-
-.tagline {
-    font-size: 2em;
-    /*left: 10%;*/
-}
 
 .font_awesome {
     /*color: #ff4000;*/
@@ -392,22 +461,53 @@ body {
     /*font-family: 'Roboto Slab', serif;*/
 }
 
+
+/*--------goal page --------------*/
+
+/*a {*/
+/*    background-color: white!important;*/
+/*    color: white!important;*/
+/*}*/
+
 .goal_form {
 
     height: 100%;
     /*font-family: 'Roboto Slab', serif;*/
     font-size: 25px;
-    margin-right: 120px;
-    margin-left: 120px;
-    background-color: #ffece6;
-    padding: 50px;
+
+    margin-left: 25%;
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
     color: black;
 
+}
 
+.add_goal_form {
+    position: absolute;
+    top: 10%;
+    width: 80%;
+
+}
+
+.new_goal_button_on_form {
+    /*font-family: 'Roboto Slab', serif;*/
+    font-size: 20px;
+    background-color: #ff4000;
+    color: white;
+    border: 1px;
+    position: absolute;
+    right: 5%
+}
+
+.fas {
+    padding-right: 15px;
 
 }
 
 
+/*--------goal page end--------------*/
 
 .climber_image {
     height: 90px;
@@ -421,27 +521,18 @@ body {
 
 .newgoal {
     /*font-family: 'Roboto Slab', serif;*/
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
     /*background-color: #ff4000;*/
-    color: black;
+    /*color: #ff4000;*/
     /*float: top-right;*/
     /*border: 1px;*/
-    border: none;
+    /*border: none;*/
     position: absolute;
     top: 15%;
     right: 20px;
 
 }
 
-.new_goal_button_on_form {
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 30px;
-    background-color: #ff4000;
-    color: white;
-    border: 1px;
-    position: absolute;
-
-}
 
 
 .mark_done {
@@ -537,9 +628,6 @@ h3 {
     color: black;
 }
 
-nav a {
-    color: #ff4000;
-}
 
 button {
     border: none;
@@ -627,7 +715,7 @@ button {
 
 
 .btn {
-    background-color: #ff4000;
+    background-color: #ff4000!important;
 
 }
 
