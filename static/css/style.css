@@ -3,32 +3,129 @@ p {
 
 }
 
-/*.collapsible {*/
 
-/*    text-align: center;*/
 
-/*}*/
+p {
+    font-size: 25px;
+}
 
-.collapsible-header {
-    padding-left: 15%!important;
+
+
+
+
+body {
+    background-color: #e6e6e6;
+    font-family: "Roboto", sans-serif;
+
 
 }
 
-.collapsible-header:hover {
+
+/*--------------home page-----------------*/
+
+.get_started_today {
+
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    text-align: left;
+    color: #ff4000;
+    font-size: 1rem;
+    padding: 15px;
+
+
+}
+
+
+.arrow2 {
+
+    position: relative;
+
+    font-size: 49px;
+
+    text-align: center;
+
+    transform: rotate(0deg);
+
+    animation: bouncearrow 1s infinite;
+
+}
+
+@keyframes bouncearrow {
+
+    0% {
+
+        top: 0px;
+
+    }
+
+    50% {
+
+        top: 20px;
+
+    }
+
+    100% {
+
+        top: 0px;
+
+    }
+
+}
+
+
+
+
+.arrow {
+
+    position: absolute;
+    top: 5%;
+    margin: 4%;
+    text-align: center;
+    animation: jump 5s infinite;
+}
+
+
+.tagline {
+    font-size: 2em;
+
+}
+
+
+
+.font_awesome {
+    color: black;
+}
+
+
+
+/*-----------------------navbar ----------------------------------*/
+
+.nav-wrapper {
+    background-color: white;
     color: #ff4000;
 
 }
 
-.collapsible-body {
-
-    color: black!important;
-    padding: 1rem;
-    font-size: 1.2em!important;
-}
 
 
 nav ul a {
     color: black;
+}
+
+
+.nav-font {
+ 
+    font-size: 20px;
+    color: black;
+   
+}
+
+.nav-font:hover {
+    font-size: 25px;
+    font: bolder;
+    background-color: white;
+
 }
 
 .dropdown-content {
@@ -41,32 +138,25 @@ nav ul a {
     color: black;
 }
 
+.logo {
+    font-family: 'Fredoka One', cursive;
+    margin-left: 10px;
+    margin-top: 10px;
+    /*color: #ff4000;*/
+    font-size: 25px;
+    color: black;
+}
+
+
+
+/*-----------------------navbar end----------------------------------*/
+
+
+
 /*-----------------------get started section---------------------*/
 
-.arrow2 {
-    
-    position: relative;
-    font-size: 49px;
-    text-align: center;
-    transform: rotate(270deg);
-    animation: bouncearrow 1s infinite;
-    
-    }
-    
-        
-    @keyframes bouncearrow {
-     0%{left:0px;}
-     50%{left:20px;}
-     100%{left:0px;}
-    }
-    
-    
-    /*@keyframes bouncearrow {*/
-    /* 0%{top:0px;}*/
-    /* 50%{top:20px;}*/
-    /* 100%{top:0px;}*/
-    /*}*/
-    
+
+
 .get_started {
     position: absolute;
     left: 1%;
@@ -82,39 +172,6 @@ nav ul a {
 }
 
 
-/*-----------------------get started end---------------------*/
-
-
-
-.test {
-
-    width: 300px;
-
-}
-
-
-
-/*.get_started_paragraph {*/
-
-/*    width: 100%;*/
-
-/*}*/
-
-.arrow {
-
-    position: absolute;
-    top: 5%;
-    /*left: 15%;*/
-    margin: 4%;
-    text-align: center;
-    animation: jump 5s infinite;
-}
-
-.tagline {
-    font-size: 2em;
-    /*left: 10%;*/
-}
-
 
 .heading {
     padding: 2%;
@@ -125,144 +182,40 @@ nav ul a {
 }
 
 
+/*-----------------------categories.html---------------------------*/
+
+
+.categories_img {
+    background-attachment: fixed;
+    background-image: url("../images/categories.jpg");
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 0px;
+    z-index: 1;
+
+}
+
 
 .add_category {
 
-    /*background-color: transparent;*/
-    position: absolute;
 
+    position: absolute;
     margin-left: 20%;
     padding: 70px;
     top: 5%;
     width: 60%;
-
     float: left;
     background-color: white;
 }
 
-.intro {
-    text-align: left;
-    color: black;
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    /*font-family: 'Roboto Slab', serif;*/
-}
+/*-----------------------END categories.html---------------------------*/
 
 
-
-
-.center {
-    text-align: center;
-    /*margin-left: 70px;*/
-}
-
-.continue {
-    font-size: 25px;
-    font: bolder;
-    margin: 6px;
-    padding: 5px;
-    border: 1px solid black;
-    background-color: transparent;
-    color: black;
-
-}
-
-p {
-    font-size: 25px;
-}
-
-.absolute {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    font-size: 30px;
-    margin-left: 15%;
-    text-align: center;
-}
-
-
-.tagline_position {
-    position: absolute;
-    top: 15%;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-
-}
-
-
-.overview_position {
-    position: absolute;
-    top: 5%;
-    width: 100%;
-
-}
-
-
-.overview {
-    position: absolute;
-    top: 250px;
-    width: 100%;
-}
-
-
-
-
-
-.not_complete {
-    background-color: black;
-
-}
-
-.complete {
-    background-color: #262626;
-}
-
-
-
-.nav-font {
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 20px;
-    /*margin: 5px;*/
-    color: black;
-    /*color: #ff4000;*/
-}
-
-.row {
-    padding-top: 1rem;
-}
-
-.nav-font:hover {
-    font-size: 25px;
-    font: bolder;
-    background-color: white;
-
-}
-
-.question {
-    font-size: 35px;
-    font: bolder;
-    margin: 6px;
-    padding: 5px;
-    border: 1px;
-    background-color: #ff4000;
-    color: white;
-
-}
-
-.orange_font {
-
-    color: #ff4000;
-
-}
-
-.center {
-    text-align: center;
-    margin-left: 0px;
-}
-
-
+/*----------------------------------goals.html-------------------------------------*/
 .goal_button {
 
     background-color: #262626;
@@ -281,44 +234,147 @@ p {
 
 }
 
-.done_button {
+.container .row {
+    margin-left: -3.55rem;
+    margin-right: -3.55rem;
+    margin-top: 2rem;
+}
 
-    background-color: #262626;
-    color: #009900;
-    border: 1px;
-    border-radius: 4px;
-    padding: 16px 32px;
+.newgoal {
+
+    position: absolute;
+    top: 15%;
+    right: 20px;
+
+}
+
+
+
+.no_padding {
+    padding: 0px!important;
+    margin: 0px!important;
+
+}
+
+.category-label {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+}
+
+
+.category-title {
+    font-weight: bold;
     text-align: center;
-    font-size: 35px;
-}
-
-.done_button:hover {
-    font-size: 45px;
-    font: bolder;
-
-}
-
-
-
-.font_awesome {
-    /*color: #ff4000;*/
+    font-size: 25px;
     color: black;
+}
+
+.small-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+
+
+}
+
+/*----------------------------------END -------------------------------------*/
+
+
+
+
+/*----------------------------------add_goal.html-----------------------------------*/
+
+
+.goal_form {
+
+    height: 100%;
+    font-size: 25px;
+    margin-left: 25%;
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
+    color: black;
+
+}
+
+.add_goal_form {
+    position: absolute;
+    top: 10%;
+    width: 80%;
+
+}
+
+.new_goal_button_on_form {
+
+    font-size: 20px;
+    background-color: #ff4000;
+    color: white;
+    border: 1px;
+    position: absolute;
+    right: 5%
+}
+
+
+/*----------------------------------END -------------------------------------*/
+
+/*----------------------------------goals and reasons sections of overview.html-------------------------------------*/
+
+
+
+.circle {
+    border-radius: 50%;
+}
+
+#get_started {
+    background-color: white;
 }
 
 
 
 .vector_img {
-    /*padding-bottom: 5%;*/
+ 
     border-radius: 50%;
 }
 
-h2 {
-    text-align: center;
-}
+
 
 #goals {
     background-color: white;
     padding-top: 1rem!important;
+    text-align: center;
+}
+
+
+.reasons_for_goal_getter {
+
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 0px;
+    height: 350px;
+}
+
+.reasons_paragraph {
+    padding-top: 5px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    margin: 10px;
+    font-size: 1em;
+
+}
+
+/*----------------------------------END-------------------------------------*/
+
+/*----------------------------------progress.html-------------------------------------*/
+
+
+.white {
+    background-color: white;
     text-align: center;
 }
 
@@ -335,35 +391,21 @@ h2 {
 
 }
 
-.row {
-    padding-top: 3rem;
+.goal_name {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 10%;
+    padding-bottom: 15px;
 
 }
 
 
-.form {
-    background-color: white;
-}
 
-/*.col {*/
+/*----------------------------------END-------------------------------------*/
 
-/*    padding: 3rem!important;*/
 
-/*margin-left: 20%!important;*/
-
-/*}*/
-
-.goal_detail {
-    position: absolute;
-    margin-left: 0%;
-    padding: 70px;
-    top: 0%;
-    width: 60%;
-
-    float: left;
-    background-color: white;
-}
-
+/*---------------------------------background images-----------------------*/
 .goal_img {
 
     background-attachment: fixed;
@@ -377,6 +419,11 @@ h2 {
     margin-bottom: 0px;
     z-index: 1;
 }
+
+
+/*----------------------------------END-------------------------------------*/
+
+/*----------------------------------add step.html-------------------------------------*/
 
 .step_img {
 
@@ -398,6 +445,11 @@ h2 {
     top: 15%;
 }
 
+/*----------------------------------END-------------------------------------*/
+
+
+/*----------------------------------goal_detail.html-------------------------------------*/
+
 .goal_detail_img {
     background-attachment: fixed;
     background-image: url("../images/mountain.jpg");
@@ -418,184 +470,9 @@ h2 {
 
 }
 
-.goal_name {
-    font-size: 2.5em;
-    text-align: center;
-    font-weight: 300;
-
-    margin-top: 10%;
-    padding-bottom: 15px;
-    /*text-shadow: 2px 4px 3px #ff4000;*/
-}
-
-
-.categories_img {
-    background-attachment: fixed;
-    background-image: url("../images/categories.jpg");
-    background-position: center;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    margin-bottom: 0px;
-    z-index: 1;
-
-}
-
-
-body {
-    background-color: #e6e6e6;
-    font-family: "Roboto", sans-serif;
-
-
-}
-
-.container .row {
-    margin-left: -3.55rem;
-    margin-right: -3.55rem;
-    /*background-color:white;*/
-    margin-top: 2rem;
-}
-
-.reasons_for_goal_getter {
-
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    padding-top: 0px;
-    height: 350px;
-}
-
-.reasons_paragraph {
-    padding-top: 5px!important;
-    padding-left: 10px!important;
-    padding-right: 10px!important;
-    margin: 10px;
-    font-size: 1em;
-
-}
-
-.collapsible-header {
-    background-color: #e6e6e6;
-    color: black;
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 20px;
-    padding: 0px;
-}
-
-.collapsible-body {
-    color: white;
-}
-
-
-
-body {
-    /*font-family: 'Roboto Slab', serif;*/
-}
-
-
-/*--------goal page --------------*/
-
-/*a {*/
-
-/*    background-color: white!important;*/
-
-/*    color: white!important;*/
-
-/*}*/
-
-.goal_form {
-
-    height: 100%;
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 25px;
-
-    margin-left: 25%;
-    background-color: white;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 0px;
-    color: black;
-
-}
-
-.add_goal_form {
-    position: absolute;
-    top: 10%;
-    width: 80%;
-
-}
-
-.new_goal_button_on_form {
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 20px;
-    background-color: #ff4000;
-    color: white;
-    border: 1px;
-    position: absolute;
-    right: 5%
-}
-
-.fas {
-    padding-right: 15px;
-
-}
-
-
-/*--------goal page end--------------*/
-
-/*--------progress page --------------*/
-
-.white {
-    background-color: white;
-    text-align: center;
-}
-
-
-/*--------progress page end--------------*/
-
-/*--------get started page--------------*/
-
-.circle {
-    border-radius: 50%;
-}
-
-#get_started {
-    background-color: white;
-}
-
-/*--------get started page end--------------*/
-
-.climber_image {
-    height: 90px;
-    width: 90px;
-    position: absolute;
-    top: 15px;
-    left: 16px;
-    font-size: 18px;
-
-}
-
-.newgoal {
-    /*font-family: 'Roboto Slab', serif;*/
-    /*font-size: 1.5em;*/
-    /*background-color: #ff4000;*/
-    /*color: #ff4000;*/
-    /*float: top-right;*/
-    /*border: 1px;*/
-    /*border: none;*/
-    position: absolute;
-    top: 15%;
-    right: 20px;
-
-}
-
-
 
 .mark_done {
 
-    /*font-family: 'Roboto Slab', serif;*/
     font-size: 15px;
     padding: 5px;
     background-color: black;
@@ -605,14 +482,11 @@ body {
 }
 
 .mark_done:hover {
-
     opacity: 0.8;
-
-
 }
 
 .addstep {
-    /*font-family: 'Roboto Slab', serif;*/
+
     font-size: 15px;
     padding: 5px;
     background-color: black;
@@ -627,38 +501,41 @@ body {
 
 
 .tick {
-    /*float: right;*/
-    /*float: left;*/
+
     left: 10%;
 }
 
-.job_title {
 
-    font-size: 25px;
+.tick {
+    list-style-image: url('/static/images/donesymbol.png');
+}
 
-    border-radius: 1px;
-    color: #ff4000;
+
+
+/*----------------------------------END-------------------------------------*/
+
+
+
+/*------------------------numerous pages------------------------------*/
+
+.active {
+    color: #ff4000 !important;
+}
+
+.btn {
+    background-color: #ff4000!important;
 
 }
 
 
-.goal_status {
-
-    font-style: italic;
+.row .col {
 
 
-
-}
-
-
-.job_title:hover {
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 30px;
-    font: bolder;
+    padding: 0px!important;
+    margin: 0px!important;
 
 
 }
-
 
 .form {
     color: white;
@@ -670,21 +547,36 @@ h3 {
 }
 
 
+.fas {
+    padding-right: 15px;
 
-.tick {
-    list-style-image: url('/static/images/donesymbol.png');
+}
+
+
+.row {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
 }
 
 
 
-.logo {
-    font-family: 'Fredoka One', cursive;
-    margin-left: 10px;
-    margin-top: 10px;
-    /*color: #ff4000;*/
-    font-size: 25px;
-    color: black;
+
+.form {
+    background-color: white;
 }
+
+h2 {
+    text-align: center;
+}
+
+
+.center {
+    text-align: center;
+    margin-left: 0px;
+}
+
+
 
 
 button {
@@ -703,110 +595,17 @@ button {
 }
 
 
-.active {
-    color: #ff4000 !important;
-}
 
 
 
-@media (max-width: 767px) {
-    .intro {
-        top: 15%;
-        left: 7%;
-        font-size: 13px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .intro {
-        top: 15%;
-        left: 2%;
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 992px) {
-    .intro {
-        top: 25%;
-        left: 7%;
-        font-size: 40px;
-    }
-}
-
-.accomplishment {
-    height: 200px;
-    width: 100%;
-    overflow: hidden;
-}
+/*------------------------END ------------------------------*/
 
 
-.goals_div {
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 25px;
-    color: white;
-    text-align: center;
-}
-
-.goals {
-    text-align: left;
-    margin-left: 20;
-}
 
 
-.nav-wrapper {
-    background-color: white;
-    color: #ff4000;
 
-}
+/*---------------------------modal -----------------------------*/
 
-/*nav {*/
-
-/*    height: 80px;*/
-
-/*}*/
-
-.card_size {
-    width: 25%;
-    float: left;
-    padding: 5px;
-}
-
-
-.btn {
-    background-color: #ff4000!important;
-
-}
-
-.small-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-
-
-}
-
-.category-label {
-    width: 240px;
-    height: 240px;
-    position: relative;
-    display: inline-block;
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 25px;
-    color: white;
-}
-
-.category-title {
-    font-weight: bold;
-    text-align: center;
-    /*font-family: 'Roboto Slab', serif;*/
-    font-size: 25px;
-    color: black;
-}
-
-
-/*------------------------------Goal Detail Page---------------------------------------------*/
-
-/*------------------------------------------------------------------------------------------------*/
 
 input:not([type]):focus:not([readonly]),
 input[type=text]:not(.browser-default):focus:not([readonly]),
@@ -832,7 +631,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
     overflow: hidden;
     height: auto;
     width: 70%;
-    /*height: 40%;*/
+
 }
 
 .modal_img {
@@ -861,28 +660,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 
 }
-
-.no_padding {
-    padding: 0px!important;
-    margin: 0px!important;
-
-}
-
-/*.row .col.s6 {*/
-
-/*    margin-left: 50px;*/
-
-/*}*/
-
-.row .col {
-
-
-    padding: 0px!important;
-    margin: 0px!important;
-
-
-}
-
 .close_modal {
     position: absolute;
     bottom: 2%;
@@ -890,17 +667,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 
-/*.row .col.s6 {*/
-
-/*    width: 50%;*/
-
-/*    margin-left: 50px;*/
-
-/*    left: auto;*/
-
-/*    right: auto;*/
-
-/*}*/
 
 .modal .modal-content {
     padding: 0px;
