@@ -7,39 +7,47 @@
 
 
 <div class="row add_category">
+
     <h3> New Category </h3>
 
-    <div class="col s8 offset-s2 form">
 
-        <form action="categories/add" method="POST" enctype="multipart/form-data">
-            <div class="row">
-                <div class="input-field">
-                    <input id="category_name" name="category_name" type="text">
-                    <label for="icon_prefix">Category Name</label>
+
+    <form action="categories/add" method="POST" enctype="multipart/form-data">
+        <div class="row category_for_row ">
+            <div class="input-field">
+                <input id="category_name" name="category_name" type="text">
+                <label for="icon_prefix">Category Name</label>
+            </div>
+        </div>
+
+        <div class="row category_for_row ">
+            <div class="file-field input-field">
+                <div class="btn waves-effect waves-light">
+                    Upload Image
+                    <input type="file" name="image">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>Upload Image</span>
-                        <input type="file" name="image">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <button class="btn waves-effect waves-light" type="submit">Add Category
+        <div class="row category_for_row ">
+            
+            <button class="btn waves-effect waves-light orange new_goal_button_on_form"><type="submit">Add Category<i class="material-icons right">playlist_add</i>
              </button>
-            </div>
-        </form>
-
-
-    </div>
+             
+             
+            <!--<button class="btn waves-effect waves-light" type="submit">Add Category-->
+            <!-- </button>-->
+        </div>
+    </form>
 </div>
+
+
+
+
+
 
 
 

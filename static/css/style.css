@@ -3,11 +3,12 @@ p {
 
 }
 
-
-
 p {
     font-size: 25px;
+
 }
+
+
 
 
 
@@ -31,7 +32,10 @@ body {
     text-align: left;
     color: #ff4000;
     font-size: 1rem;
+    border-radius: 5px;
     padding: 15px;
+    width: 200px;
+    height: 50px;
 
 
 }
@@ -115,10 +119,9 @@ nav ul a {
 
 
 .nav-font {
- 
-    font-size: 20px;
+
     color: black;
-   
+
 }
 
 .nav-font:hover {
@@ -151,11 +154,7 @@ nav ul a {
 
 /*-----------------------navbar end----------------------------------*/
 
-
-
 /*-----------------------get started section---------------------*/
-
-
 
 .get_started {
     position: absolute;
@@ -181,9 +180,31 @@ nav ul a {
 
 }
 
+.heading_padded {
+    padding: 4%;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.one {
+    background-color: #ccf2ff;
+
+}
+
+.two {
+    background-color: #99e6ff
+}
+
+.three {
+    background-color: #66d9ff
+}
+
+.four {
+    background-color: #00bfff
+}
 
 /*-----------------------categories.html---------------------------*/
-
 
 .categories_img {
     background-attachment: fixed;
@@ -204,18 +225,24 @@ nav ul a {
 
 
     position: absolute;
-    margin-left: 20%;
-    padding: 70px;
-    top: 5%;
-    width: 60%;
-    float: left;
+    margin-left: 30%;
+    padding-left: 70px;
+    padding-right: 70px;
+    top: 15%;
+    /*width: 100%;*/
+    /*float: left;*/
     background-color: white;
+}
+
+
+.category_for_row {
+    padding: 1.5rem!important;
 }
 
 /*-----------------------END categories.html---------------------------*/
 
-
 /*----------------------------------goals.html-------------------------------------*/
+
 .goal_button {
 
     background-color: #262626;
@@ -281,13 +308,17 @@ nav ul a {
 
 }
 
+
+.circle {
+    font-size: 1em;
+    list-style-type: disc;
+    margin-left: 10px;
+
+}
+
 /*----------------------------------END -------------------------------------*/
 
-
-
-
 /*----------------------------------add_goal.html-----------------------------------*/
-
 
 .goal_form {
 
@@ -324,8 +355,6 @@ nav ul a {
 
 /*----------------------------------goals and reasons sections of overview.html-------------------------------------*/
 
-
-
 .circle {
     border-radius: 50%;
 }
@@ -337,7 +366,7 @@ nav ul a {
 
 
 .vector_img {
- 
+
     border-radius: 50%;
 }
 
@@ -372,7 +401,6 @@ nav ul a {
 
 /*----------------------------------progress.html-------------------------------------*/
 
-
 .white {
     background-color: white;
     text-align: center;
@@ -387,15 +415,25 @@ nav ul a {
 }
 
 .current_goal:hover {
-    font-size: 30px;
+    font-size: 20px;
 
 }
+
+.finished_goal {
+
+    color: black;
+    background-color: transparent;
+    line-height: 2;
+    /*font-family: "Roboto", sans-serif;*/
+}
+
+
 
 .goal_name {
     font-size: 2.5em;
     text-align: center;
     font-weight: 300;
-    margin-top: 10%;
+    /*margin-top: 10%;*/
     padding-bottom: 15px;
 
 }
@@ -404,8 +442,8 @@ nav ul a {
 
 /*----------------------------------END-------------------------------------*/
 
-
 /*---------------------------------background images-----------------------*/
+
 .goal_img {
 
     background-attachment: fixed;
@@ -447,7 +485,6 @@ nav ul a {
 
 /*----------------------------------END-------------------------------------*/
 
-
 /*----------------------------------goal_detail.html-------------------------------------*/
 
 .goal_detail_img {
@@ -462,22 +499,36 @@ nav ul a {
     margin-bottom: 0px;
     z-index: 1;
 
+
 }
 
 
 .goal_detail_paragraph {
-    font-size: 1.5em;
+    font-size: 1.3em;
 
 }
+
+.goal_detail {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    background-color: white;
+
+
+}
+
+
 
 
 .mark_done {
 
     font-size: 15px;
     padding: 5px;
-    background-color: black;
-    color: #FF6C39;
+    /*background-color: black;*/
+    /*color: #FF6C39;*/
+    color: black;
     border: 1px;
+    border-radius: 5px;
 
 }
 
@@ -514,8 +565,6 @@ nav ul a {
 
 /*----------------------------------END-------------------------------------*/
 
-
-
 /*------------------------numerous pages------------------------------*/
 
 .active {
@@ -538,7 +587,7 @@ nav ul a {
 }
 
 .form {
-    color: white;
+    color: black;
 }
 
 h3 {
@@ -600,12 +649,7 @@ button {
 
 /*------------------------END ------------------------------*/
 
-
-
-
-
 /*---------------------------modal -----------------------------*/
-
 
 input:not([type]):focus:not([readonly]),
 input[type=text]:not(.browser-default):focus:not([readonly]),
@@ -627,7 +671,7 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .modal {
     position: absolute;
-    top: 26%;
+    margin-top: 8%;
     overflow: hidden;
     height: auto;
     width: 70%;
@@ -658,13 +702,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
     overerflow: auto;
     margin: 0 auto;
 
+}
 
-}
-.close_modal {
-    position: absolute;
-    bottom: 2%;
-    right: 2%;
-}
+/*.close-modal {*/
+/*    position: absolute;*/
+    /*bottom: 2%;*/
+    /*right: 2%;*/
+/*    padding: 5px;*/
+/*}*/
 
 
 
