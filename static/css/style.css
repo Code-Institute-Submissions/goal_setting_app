@@ -40,6 +40,27 @@ body {
 
 }
 
+@media (max-width:767px) {
+    .get_started_today {
+        top: 80%;
+        left: 5%;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .get_started_today {
+        top: 10%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .get_started_today {
+        top: 15%;
+    }
+}
+
+
 
 .arrow2 {
 
@@ -83,34 +104,39 @@ body {
 .tagline {
 
     position: absolute;
-    top: 5%;
-    margin: 4%;
+    /*top: 5%;*/
+    /*margin: 4%;*/
     text-align: center;
-    animation: jump 5s infinite;
-    font-size: 2em;
+    /*animation: jump 5s infinite;*/
+    /*font-size: 2em;*/
 }
 
 
-/*@media (max-width:767px) {*/
-/*    .tagline {*/
-        
-    
-/*    top: 15%;*/
-/*    margin: 4%;*/
-/*    font-size: 1em;*/
-        
-/*    }*/
-/*}*/
+@media (max-width:767px) {
+
+    .tagline {
+
+        top: 0%;
+        margin: 4%;
+        /*font-size: 1em;*/
+    }
+
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
     .tagline {
-        
+        top: 12%;
+        margin: 4%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1800px) {
     .tagline {
-        
+
+        margin-left: 10%;
+        margin-right: 10%;
+        top: 12%;
+        font-size: 2em;
     }
 }
 
@@ -188,6 +214,9 @@ nav .button-collapse {
     margin-top: 5px;
 
 }
+
+
+
 
 .number {
     font-size: 4rem;
@@ -409,8 +438,10 @@ nav .button-collapse {
     text-align: center;
     padding: 10px;
     padding-top: 0px;
-    height: 350px;
+    height: 100%;
+   
 }
+
 
 .reasons_paragraph {
     padding-top: 5px!important;
@@ -420,6 +451,39 @@ nav .button-collapse {
     font-size: 1em;
 
 }
+
+
+
+.getting_started {
+
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 0px;
+    height: 100%;
+   
+}
+
+@media (max-width:767px) {
+    .getting_started {
+        height: 310px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .getting_started {
+    height: 400px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1800px) {
+    .getting_started {
+     height: 420px;
+    }
+}
+
+
 
 /*----------------------------------END-------------------------------------*/
 
