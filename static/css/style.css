@@ -282,10 +282,27 @@ nav .button-collapse {
     padding-left: 70px;
     padding-right: 70px;
     top: 15%;
-    /*width: 100%;*/
-    /*float: left;*/
     background-color: white;
 }
+
+
+@media (max-width:767px) {
+    .add_category {
+        margin: 5%;
+        padding: 5px;
+
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .add_category {
+        margin-left: 18%;
+        top: 25%;
+
+    }
+}
+
 
 
 .category_for_row {
@@ -439,7 +456,7 @@ nav .button-collapse {
     padding: 10px;
     padding-top: 0px;
     height: 100%;
-   
+
 }
 
 
@@ -461,7 +478,7 @@ nav .button-collapse {
     padding: 10px;
     padding-top: 0px;
     height: 100%;
-   
+
 }
 
 @media (max-width:767px) {
@@ -473,13 +490,13 @@ nav .button-collapse {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .getting_started {
-    height: 400px;
+        height: 400px;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1800px) {
     .getting_started {
-     height: 420px;
+        height: 420px;
     }
 }
 
