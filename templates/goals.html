@@ -9,8 +9,8 @@
 
     <!--<a class="btn waves-effect waves-light orange newgoal" href="/add_goal"><i class="fas fa-plus-circle"></i>ADD NEW GOAL</a>-->
 
-
-    <div class="col s12 center">
+<div class="col s1"></div>
+    <div class="col s10 center">
 
 
 
@@ -23,7 +23,17 @@
             <div class="category-label"><img class="small-img" src="{{category.image}}">
                 <span class="category-title">{{ category.category_name }}</span>
             </div>
-        </a> </button>{% endfor %} {% if category != 'Goals' %}
+        </a> </button>
+        
+       {% endfor %} 
+         <div class="row">
+            
+        </div>
+        
+        
+        
+        
+        {% if category != 'Goals' %}
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
