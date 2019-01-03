@@ -645,12 +645,22 @@ nav .button-collapse {
 
 .goal_detail {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 5%;
+    
     background-color: white;
 
 
 }
+
+@media (max-width:767px) {
+    .goal_detail {
+      
+right: 5%;
+    }
+}
+
+
 
 
 
