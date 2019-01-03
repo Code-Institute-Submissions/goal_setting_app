@@ -403,11 +403,29 @@ nav .button-collapse {
 
 }
 
+@media (max-width:767px) {
+    .goal_form {
+       margin: 5%;
+     
+
+    }
+}
+
+
 .add_goal_form {
     position: absolute;
     top: 10%;
     width: 80%;
 
+}
+
+
+@media (max-width:767px) {
+    .add_goal_form {
+        width: 100%;
+     
+
+    }
 }
 
 .new_goal_button_on_form {
@@ -419,6 +437,17 @@ nav .button-collapse {
     position: absolute;
     right: 5%
 }
+
+
+@media (max-width:767px) {
+    .new_goal_button_on_form {
+        right: 10%
+     
+
+    }
+}
+
+
 
 
 /*----------------------------------END -------------------------------------*/
