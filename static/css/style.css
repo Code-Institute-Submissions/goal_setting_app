@@ -543,8 +543,9 @@ nav .button-collapse {
 .current_goal {
 
     color: black;
-    background-color: transparent;
+    /*background-color: transparent;*/
     line-height: 2;
+    /*text-align: left;*/
     /*font-family: "Roboto", sans-serif;*/
 }
 

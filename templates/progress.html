@@ -1,15 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
 
-<div class="row">
-<div class="col s2"></div>
- <div class="col s8">
+<div class="container">
+ <!--<div class="col s2"></div>-->
+ <div class="row white">
 
-  <div class="row white">
+  <div class="col s12">
 
-   <div class="row heading">Your Progress</div>
-   <div class="col s2"></div>
-   <div class="col s4">
+
+
+   <div class="heading">Your Progress</div>
+
+
+   <div class="col s6">
 
     <img src="{{ url_for('static', filename='images/in_progress.jpg')}}">
     <div class="goal_name">Current goals</div>
@@ -17,16 +20,30 @@
 
     {% for goal in unfinished %}
 
-    <dl>
-     <dt><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a></dt> {% if goal.status %}
-     <dd> {{ goal.status }}!</dd>
-     <dd> Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></dd>
-     {% endif %}
-    </dl>
+    <!--<dl>-->
+    <!-- <dt><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a></dt> {% if goal.status %}-->
+    <!-- <dd> {{ goal.status }}!</dd>-->
+    <!-- <dd> Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></dd>-->
+    <!-- {% endif %}-->
+    <!--</dl>-->
+
+
+
+
+    <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a>
+    <br>
+    <ul>
+     <li>
+      {% if goal.status %} {{ goal.status }}! </li><br>
+     <li>Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a> </li><br> {% endif %}
+
+    </ul>
+
     {%endfor%}
    </div>
 
-   <div class="col s4">
+   <div class="col s6">
+
     <img src="{{ url_for('static', filename='images/complete.jpg')}}">
     <div class="goal_name">Completed goals</div>
 
@@ -40,7 +57,7 @@
     </ul> {%endfor%}
 
    </div>
-   <div class="col s2"></div>
+   <!--<div class="col s2"></div>-->
   </div>
  </div>
 </div>
