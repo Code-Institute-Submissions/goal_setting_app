@@ -1,23 +1,51 @@
-p {
-    font-size: 2em;
+/*-----------------------navbar ----------------------------------*/
+
+.nav-wrapper {
+    background-color: white;
+    color: #ff4000;
 
 }
 
-p {
+
+
+nav ul a {
+    color: black;
+}
+
+
+.nav-font {
+
+    color: black;
+
+}
+
+.nav-font:hover {
     font-size: 25px;
+    font: bolder;
+    background-color: white;
 
 }
 
+.dropdown-content {
+    top: 60px!important;
 
+}
 
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: black;
+}
 
+.logo {
+    font-family: 'Fredoka One', cursive;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: black;
+}
 
-
-
-body {
-    background-color: #e6e6e6;
-    font-family: "Roboto", sans-serif;
-
+nav .button-collapse {
+    color: #ff4000;
 
 }
 
@@ -104,11 +132,8 @@ body {
 .tagline {
 
     position: absolute;
-    /*top: 5%;*/
-    /*margin: 4%;*/
     text-align: center;
-    /*animation: jump 5s infinite;*/
-    /*font-size: 2em;*/
+
 }
 
 
@@ -118,7 +143,6 @@ body {
 
         top: 0%;
         margin: 4%;
-        /*font-size: 1em;*/
     }
 
 }
@@ -142,67 +166,13 @@ body {
 
 
 
-
 .font_awesome {
     color: black;
 }
 
 
 
-/*-----------------------navbar ----------------------------------*/
 
-.nav-wrapper {
-    background-color: white;
-    color: #ff4000;
-
-}
-
-
-
-nav ul a {
-    color: black;
-}
-
-
-.nav-font {
-
-    color: black;
-
-}
-
-.nav-font:hover {
-    font-size: 25px;
-    font: bolder;
-    background-color: white;
-
-}
-
-.dropdown-content {
-    top: 60px!important;
-
-}
-
-.dropdown-content li>a,
-.dropdown-content li>span {
-    color: black;
-}
-
-.logo {
-    font-family: 'Fredoka One', cursive;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 25px;
-    color: black;
-}
-
-nav .button-collapse {
-    color: #ff4000;
-
-}
-
-
-
-/*-----------------------navbar end----------------------------------*/
 
 /*-----------------------get started section---------------------*/
 
@@ -216,13 +186,10 @@ nav .button-collapse {
 }
 
 
-
-
 .number {
     font-size: 4rem;
     font-family: 'Pacifico', cursive;
 }
-
 
 
 .heading {
@@ -309,7 +276,6 @@ nav .button-collapse {
     padding: 1.5rem!important;
 }
 
-/*-----------------------END categories.html---------------------------*/
 
 /*----------------------------------goals.html-------------------------------------*/
 
@@ -389,7 +355,6 @@ nav .button-collapse {
 
 }
 
-/*----------------------------------END -------------------------------------*/
 
 /*----------------------------------add_goal.html-----------------------------------*/
 
@@ -449,9 +414,6 @@ nav .button-collapse {
 }
 
 
-
-
-/*----------------------------------END -------------------------------------*/
 
 /*----------------------------------goals and reasons sections of overview.html-------------------------------------*/
 
@@ -531,9 +493,6 @@ nav .button-collapse {
 }
 
 
-
-/*----------------------------------END-------------------------------------*/
-
 /*----------------------------------progress.html-------------------------------------*/
 
 .white {
@@ -544,10 +503,8 @@ nav .button-collapse {
 .current_goal {
 
     color: black;
-    /*background-color: transparent;*/
     line-height: 2;
-    /*text-align: left;*/
-    /*font-family: "Roboto", sans-serif;*/
+
 }
 
 .current_goal:hover {
@@ -560,7 +517,6 @@ nav .button-collapse {
     color: black;
     background-color: transparent;
     line-height: 2;
-    /*font-family: "Roboto", sans-serif;*/
 }
 
 
@@ -569,14 +525,11 @@ nav .button-collapse {
     font-size: 2.5em;
     text-align: center;
     font-weight: 300;
-    /*margin-top: 10%;*/
     padding-bottom: 15px;
 
 }
 
 
-
-/*----------------------------------END-------------------------------------*/
 
 /*---------------------------------background images-----------------------*/
 
@@ -595,7 +548,6 @@ nav .button-collapse {
 }
 
 
-/*----------------------------------END-------------------------------------*/
 
 /*----------------------------------add step.html-------------------------------------*/
 
@@ -619,7 +571,6 @@ nav .button-collapse {
     top: 15%;
 }
 
-/*----------------------------------END-------------------------------------*/
 
 /*----------------------------------goal_detail.html-------------------------------------*/
 
@@ -662,16 +613,10 @@ nav .button-collapse {
 }
 
 
-
-
-
-
 .mark_done {
 
     font-size: 15px;
     padding: 5px;
-    /*background-color: black;*/
-    /*color: #FF6C39;*/
     color: black;
     border: 1px;
     border-radius: 5px;
@@ -707,9 +652,6 @@ nav .button-collapse {
     list-style-image: url('/static/images/donesymbol.png');
 }
 
-
-
-/*----------------------------------END-------------------------------------*/
 
 /*------------------------numerous pages------------------------------*/
 
@@ -792,10 +734,6 @@ button {
 
 
 
-
-
-/*------------------------END ------------------------------*/
-
 /*---------------------------modal -----------------------------*/
 
 input:not([type]):focus:not([readonly]),
@@ -855,4 +793,27 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .modal .modal-content {
     padding: 0px;
+}
+
+
+
+
+
+
+p {
+    font-size: 2em;
+
+}
+
+p {
+    font-size: 25px;
+
+}
+
+
+body {
+    background-color: #e6e6e6;
+    font-family: "Roboto", sans-serif;
+
+
 }

@@ -19,70 +19,40 @@
 <body>
     <header>
 
-        <div class="navbar-fixed">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="{{ url_for('add_goal') }}">Add Goal</a></li>
+            <li><a href="{{ url_for('get_goals') }}">View Goals</a></li>
 
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="/categories">Add Category</a></li>
+        </ul>
+        <ul id="dropdown3" class="dropdown-content">
+            <li><a href="{{ url_for('progress_page') }}">Current progress</a></li>
 
+        </ul>
 
+        <nav>
+            <div class="nav-wrapper">
+                <a class="logo hide-on-small-only" href="{{ url_for('overview_page') }}"> Goal Keeper </a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Check Your Progress<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Goals<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
 
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="{{ url_for('add_goal') }}">Add Goal</a></li>
-                <li><a href="{{ url_for('get_goals') }}">View Goals</a></li>
+        <ul class="side-nav" id="mobile-demo">
 
+            <li><a class="nav-font" href="{{ url_for('add_goal') }}">Add Goal</a></li>
+            <li><a class="nav-font" href="{{ url_for('get_goals') }}">View Goals</a></li>
+            <li><a class="nav-font" href="/categories">Add Category</a></li>
+            <li><a class="nav-font" href="{{ url_for('progress_page') }}">Current progress</a></li>
+        </ul>
 
-            </ul>
-
-            <ul id="dropdown2" class="dropdown-content">
-                <li><a href="/categories">Add Category</a></li>
-            </ul>
-
-            <ul id="dropdown3" class="dropdown-content">
-                <li><a href="{{ url_for('progress_page') }}">Current progress</a></li>
-
-            </ul>
-
-
-            <nav>
-
-
-                <div class="nav-wrapper">
-                    <a class="logo hide-on-small-only" href="{{ url_for('overview_page') }}"> Goal Keeper </a>
-
-
-                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
-
-
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-                        <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Check Your Progress<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <!--<li><a class="nav-font" href="/categories">Add Category</a></li>-->
-
-
-                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Goals<i class="material-icons right">arrow_drop_down</i></a></li>
-
-                        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-
-
-
-                    </ul>
-
-
-
-                    <ul class="side-nav" id="mobile-demo">
-
-                        <li><a class="nav-font" href="{{ url_for('add_goal') }}">Add Goal</a></li>
-                        <li><a class="nav-font" href="{{ url_for('get_goals') }}">View Goals</a></li>
-                        <li><a class="nav-font" href="/categories">Add Category</a></li>
-                        <li><a class="nav-font" href="{{ url_for('progress_page') }}">Current progress</a></li>
-
-
-
-
-                    </ul>
-                </div>
-            </nav>
-        </div>
     </header>
 
 
@@ -90,8 +60,6 @@
         {% block content %} {% endblock %}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
-    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 
