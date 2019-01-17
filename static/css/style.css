@@ -68,6 +68,9 @@ nav .button-collapse {
 
 }
 
+
+
+
 @media (max-width:767px) {
     .get_started_today {
         top: 80%;
@@ -731,6 +734,26 @@ button {
     font-size: 1.2em;
 
 }
+
+
+
+
+
+
+/*----------------footer----------------------------*/
+
+.copyright {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
 
 
 

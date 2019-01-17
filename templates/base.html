@@ -18,6 +18,8 @@
 
 <body>
     <header>
+        
+        <!-----------------------------nav bar -------------------------------->
 
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="{{ url_for('add_goal') }}">Add Goal</a></li>
@@ -54,42 +56,51 @@
         </ul>
 
     </header>
+    
+    
+           <!-----------------------------footer-------------------------------->
+
+
 
 
     <div>
         {% block content %} {% endblock %}
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.collapsible').collapsible();
-            $('select').material_select();
-            $(".button-collapse").sideNav();
-            $(".dropdown-button").dropdown();
-            $('#exampleModalCenter').modal('open');
-        });
-
-        $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year,
-            today: 'Today',
-            clear: 'Clear',
-            close: 'Ok',
-            closeOnSelect: false // Close upon selecting a date,
-        });
-        $(".delete_task_btn").click(function() {
-            $('#hidden-task-id').attr('value', $(this).data("taskid"));
-        });
-
-        $('.modal').modal();
-    </script>
-
-
-
+<div class="footer">
+    <div class="row">
+        <div class="col-xs-3 copyright">
+            ©<i>Goal Keeper</i>
+        </div>
+    </div>
+</div>
 
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.collapsible').collapsible();
+        $('select').material_select();
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown();
+        $('#exampleModalCenter').modal('open');
+    });
+
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+    });
+    $(".delete_task_btn").click(function() {
+        $('#hidden-task-id').attr('value', $(this).data("taskid"));
+    });
+
+    $('.modal').modal();
+</script>
 </html>
