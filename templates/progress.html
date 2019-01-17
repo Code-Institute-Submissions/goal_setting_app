@@ -2,33 +2,17 @@
 
 
 <div class="container">
- <!--<div class="col s2"></div>-->
  <div class="row white">
-
   <div class="col s12">
-
-
-
    <div class="heading">Your Progress</div>
 
 
+   <!------------------------------current goals section------------------------------->
    <div class="col s12 m6">
-
     <img src="{{ url_for('static', filename='images/in_progress.jpg')}}">
     <div class="goal_name">Current goals</div>
 
-
     {% for goal in unfinished %}
-
-    <!--<dl>-->
-    <!-- <dt><a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a></dt> {% if goal.status %}-->
-    <!-- <dd> {{ goal.status }}!</dd>-->
-    <!-- <dd> Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a></dd>-->
-    <!-- {% endif %}-->
-    <!--</dl>-->
-
-
-
 
     <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal"><b>{{ goal.goal_name }}</b></a>
     <br>
@@ -36,34 +20,26 @@
      <li>
       {% if goal.status %} {{ goal.status }}! </li><br>
      <li>Mark a step complete<a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="link"> here</a> </li><br> {% endif %}
-
     </ul>
-
     {%endfor%}
    </div>
 
+   <!--------------------------------------completed goals section-------------------------------->
    <div class="s12 m6">
-
     <img src="{{ url_for('static', filename='images/complete.jpg')}}">
     <div class="goal_name">Completed goals</div>
 
     {% for goal in finished %}
 
     <ul>
-
      <li class="finished_goal"><b>{{ goal.goal_name }}</b>
      </li>
-
     </ul> {%endfor%}
 
    </div>
-   <!--<div class="col s2"></div>-->
   </div>
  </div>
 </div>
-
-
-
 </div>
 
 {% endblock %}

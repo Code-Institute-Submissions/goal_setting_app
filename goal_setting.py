@@ -13,6 +13,8 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 mongo = PyMongo(app)
 
 
+# ---------------------------------home page----------------------------------
+
 @app.route("/")
 def overview_page():
     categories = mongo.db["Categories"].find()
@@ -26,7 +28,8 @@ def overview_page():
     return render_template("overview.html", unfinished=unfinished, finished=finished)
     
     
-    
+  # ---------------------------------progress page----------------------------------
+  
 @app.route("/progress")
 def progress_page():
     categories = mongo.db["Categories"].find()
@@ -40,9 +43,14 @@ def progress_page():
     return render_template("progress.html", unfinished=unfinished, finished=finished)
     
     
+    
+# ---------------------------------categories page----------------------------------
+
 @app.route('/categories')
 def get_categories():
     return render_template("categories.html")
+    
+# ---------------------------------add category----------------------------------
 
 @app.route('/categories/add', methods=["POST"])
 def add_category():
@@ -57,7 +65,8 @@ def add_category():
     mongo.db["Categories"].insert_one(form_values)
     return redirect(url_for("get_goals"))
    
- 
+# ---------------------------------goalspage----------------------------------
+
 @app.route("/goals")
 def get_goals():
     categories = mongo.db["Categories"].find()
@@ -70,11 +79,15 @@ def get_goals_by_category(category):
     return render_template("goals.html", goals=goals, categories=categories, category=category)
 
 
+# ---------------------------------goal detail page----------------------------------
+
 @app.route("/goals/<category>/<goal_id>")
 def goal_details(category, goal_id):
         the_goal =  mongo.db[category].find_one({"_id": ObjectId(goal_id)})
         return render_template('goal_detail.html', goal=the_goal)
 
+
+# ---------------------------------add new step form----------------------------------
 
 @app.route("/goals/<category>/<goal_id>/add_step", methods=["GET", "POST"])
 def add_step(category, goal_id):
@@ -114,8 +127,9 @@ def add_step(category, goal_id):
             return redirect(url_for("goal_details", category=category, goal_id=goal_id))
         else:
             return render_template("add_step.html", goal=the_goal)
+            
 
-
+# ---------------------------------mark step as done or not done form----------------------------------
 
 @app.route("/goals/<category>/<goal_id>/<step_id>/done", methods=["POST"])
 def mark_done(category, goal_id, step_id):
@@ -154,10 +168,7 @@ def mark_not_done(category, goal_id, step_id):
     return redirect(url_for("goal_details", category=category, goal_id=goal_id))
     
     
-    
-    
-
-
+# --------------------------------add new goal----------------------------------
     
 @app.route("/add_goal", methods=["GET", "POST"])
 def add_goal():
@@ -172,10 +183,6 @@ def add_goal():
         categories = mongo.db.Categories.find()
         return render_template("add_goal.html", categories=categories)
 
-
-
-
-        
 
 if __name__ == "__main__":
         app.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)), debug=True)

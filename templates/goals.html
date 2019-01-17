@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<!--<div class="container">-->
+
 <div class="row">
     <h3>{{ category }} </h3>
     <div class="center">
@@ -7,25 +7,22 @@
     </div>
 
 
-    <!--<a class="btn waves-effect waves-light orange newgoal" href="/add_goal"><i class="fas fa-plus-circle"></i>ADD NEW GOAL</a>-->
-
     <div class="col s1"></div>
+    
+    
+    <!-------------------------modal------------------------------------->
+    
     <div class="col s10 categories_layout">
 
 
-
         {% for category in categories %}
-
-
 
 
         <button type="button" data-toggle="modal"> <a href="{{ url_for ('get_goals_by_category', category=category.category_name) }}">
             <div class="category-label"><img class="small-img" src="{{category.image}}">
                 <span class="category-title">{{ category.category_name }}</span>
             </div>
-        </a> </button> {% endfor %} 
-        
-        {% if category != 'Goals' %}
+        </a> </button> {% endfor %} {% if category != 'Goals' %}
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -33,12 +30,12 @@
                     <div class="modal-body">
 
                         <div class="row no_padding">
-                           
-                           
+
+
                             <div class="col l6 no padding">
                                 <img class="modal_img_2" src="{{url_for('static', filename='images/modal.jpg')}}">
                             </div>
-                            
+
                             <div class="col s12 l6 no padding">
                                 <p><b> Select Goal for further details. </b></p>
 
@@ -46,9 +43,10 @@
 
                                 <a href="{{url_for('goal_details', category=goal.category_name, goal_id=goal._id)}}" class="current_goal">{{ goal.goal_name }}</a><br> {% endfor %}
                             </div>
-                           
-                            <div class="modal-close"> <button data-dismiss="modal">Close [ x ]</button> </div> <p></p>
-                        
+
+                            <div class="modal-close"> <button data-dismiss="modal">Close [ x ]</button> </div>
+                            <p></p>
+
                         </div>
                     </div>
                 </div>
@@ -57,5 +55,5 @@
         {% endif %}
     </div>
 </div>
-</div>
+
 {% endblock %}

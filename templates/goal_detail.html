@@ -1,21 +1,14 @@
 {% extends 'base.html' %} {% block content %}
-<!--<img class="responsive-img goal_img" src="{{url_for('static', filename='images/goal_detail2.jpg')}}">-->
 
 <div class="goal_detail_img"></div>
-
 <div class="goal_detail_img"></div>
 
-
+<!--------------------------page that shows the goal and its details-------------------------------->
 
 <div class="row goal_detail">
     <div class="col s1"></div>
-
     <div class="col s10">
-
         <div class="goal_name">{{ goal.goal_name }}</div>
-
-
-
         <div class="goal_detail_paragraph">
             {% if goal.status %} Hi there! <b>{{ goal.status }}.</b> Keep it up! {% endif %}
             <p></p> Remember, why are you doing this?<b> {{ goal.goal_reasons }}!</b>
@@ -25,9 +18,7 @@
             <div>Simply complete these steps to acheive this goal:</div>
             {% endif %}
 
-
             <p></p>
-
 
             {%for step in goal.steps%}
 
@@ -38,6 +29,7 @@
     {% if step.is_done %}
     <img src="{{ url_for('static', filename='images/donesymbol.png')}}" class="tick"></span>
 
+                        <!-------------------------------------form to mark a step done or not done---------------------------------------->
 
                         <form method="POST" action="{{ url_for('mark_not_done', category=goal.category_name, goal_id=goal._id, step_id=step._id)  }}">
                             <input class="mark_done" type="Submit" value="Mark as Not Done">
@@ -48,16 +40,11 @@
                             <input class="mark_done" type="Submit" value="Mark as Done">
                         </form>
                         <hr>
-
                     </div>
-
-
                     {% endif %}
-                    </li>
+                </li>
             </ol>
             {%endfor%}
-
-
 
             <p><a href="{{url_for('add_step', category=goal.category_name, goal_id=goal._id)}}" class="addstep"><i class="fas fa-plus"  >&ensp;STEP</i></a></p>
         </div>
