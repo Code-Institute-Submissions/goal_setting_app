@@ -105,7 +105,7 @@ An interesting bug when viewing app on internet explorer only  (within the deskt
 
 # Deployment
 
-The site is hosted on github pages (deployed from the master branch) and on Heroku (https://katiemodonnell88-goal-app.herokuapp.com/ ).
+The site is hosted on Heroku (https://katiemodonnell88-goal-app.herokuapp.com/).
 
 Run locally
 
