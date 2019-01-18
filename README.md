@@ -10,6 +10,8 @@ By physically marking steps as done throughout the process and by having a visua
 
 A live version of the site is available [here](https://katiemodonnell88-goal-app.herokuapp.com/)
 
+There have been a number of goals already added for the purpose of this project. More goals and categories can be added by the user.
+
 # UX
 
 The colour theme is primarily grey and white throughout the site which is modern and attractive to the user. The colour orange is also used in small amounts which makes certain features pop and is also associated with meanings of enthusiasm, creativity and success. The use of inspirational and meaningful images throughout the site pairs well with the theme and is attractive to users. The overall layout is quite simple and users can access all parts of the site by using any of the three links on the navigation bar. 

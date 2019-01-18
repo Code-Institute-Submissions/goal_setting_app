@@ -306,6 +306,14 @@ nav .button-collapse {
     margin-top: 2rem;
 }
 
+@media (max-width:767px) {
+    .container .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
 .newgoal {
 
     position: absolute;
@@ -501,6 +509,7 @@ nav .button-collapse {
 .white {
     background-color: white;
     text-align: center;
+
 }
 
 .current_goal {
