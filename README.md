@@ -86,10 +86,10 @@ User testing was done to ensure:
 * The site is responsive across all screen sizes and devices.
 
 The following forms are posted correctly and the database is updated accordingly:
-* Add category
-* Add new goal
-* Add new step
-* Mark step done/not done
+a. Add category
+b. Add new goal
+c. Add new step
+d. Mark step done/not done
 
 * Form submission works across all devices and screen sizes.
 * User is redirected to the correct pages after forms are posted.
