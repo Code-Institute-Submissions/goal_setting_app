@@ -37,16 +37,17 @@ Wireframes were drawn manually and can be found in the wireframes folder.
 * linkable sections on the site from the navbar
 * linkable sections on the home page to other parts of the site
 * keyframe bouncing arrows 
+* progress page which links in all goals that are in progress as well as those that have been completed. The user can click these goals and will be taken directy to the goal detail page.
+* Modals are used to display the list of goals in a category when the user selects the category. This is an efficient use of space on the page.
+* Each goal detail page pulls in the “goals status”, “reasons for doing the goal” and the “goals steps” from the database, displaying all information about the goal for the user.
 
 Various forms: 
 * add new category
 * add new goal
 * add new step
 * mark steps as done/not done
-•	
-* progress page which links in all goals that are in progress as well as those that have been completed. The user can click these goals and will be taken directy to the goal detail page.
-* Modals are used to display the list of goals in a category when the user selects the category. This is an efficient use of space on the page.
-* Each goal detail page pulls in the “goals status”, “reasons for doing the goal” and the “goals steps” from the database, displaying all information about the goal for the user.
+
+
 
 ## Features Left to Implement
 
